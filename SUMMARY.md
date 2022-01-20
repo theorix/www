@@ -1,23 +1,13 @@
 # Table of contents
 
 * [Page 1](README.md)
-* [floo-iOS Reference - 美信拓扑 - 即时通讯IM 一键启用 多云架构](flooios-reference-mei-xin-tuo-pu-ji-shi-tong-xun-im-yi-jian-qi-yong-duo-yun-jia-gou.md)
-* [floo-iOS Hierarchy](floo-ios-hierarchy.md)
-* [BMXVoiceAttachment Class Reference](bmxvoiceattachment-class-reference.md)
-* [BMXMessageAttachment Class Reference](bmxmessageattachment-class-reference.md)
-* [BMXLocationAttachment Class Reference](bmxlocationattachment-class-reference.md)
-* [BMXSDKConfig Class Reference](bmxsdkconfig-class-reference.md)
-* [BMXImageAttachment Class Reference](bmximageattachment-class-reference.md)
-* [BMXMessageConfig Class Reference](bmxmessageconfig-class-reference.md)
-* [BMXClient Class Reference](bmxclient-class-reference.md)
-* [BMXGroup Class Reference](bmxgroup-class-reference.md)
-* [BMXMessageObject Class Reference](bmxmessageobject-class-reference.md)
-* [BMXFileAttachment Class Reference](bmxfileattachment-class-reference.md)
-* [BMXPushUserProfile Class Reference](bmxpushuserprofile-class-reference.md)
-* [BMXMessageSetting Class Reference](bmxmessagesetting-class-reference.md)
-* [BMXRoster Class Reference](bmxroster-class-reference.md)
-* [BMXDevice Class Reference](bmxdevice-class-reference.md)
-* [BMXConversation Class Reference](bmxconversation-class-reference.md)
-* [BMXUserProfile Class Reference](bmxuserprofile-class-reference.md)
-* [BMXVideoAttachment Class Reference](bmxvideoattachment-class-reference.md)
-* [BMXCreatGroupOption Class Reference](bmxcreatgroupoption-class-reference.md)
+
+## 语言选择
+
+* [Page 4](yu-yan-xuan-ze/page-4.md)
+* [Page 3](yu-yan-xuan-ze/page-3.md)
+* [Page 2](yu-yan-xuan-ze/page-2.md)
+
+***
+
+* [EN](https://app.gitbook.com/s/2v3krPm8yUOULPse1Lgn/)
