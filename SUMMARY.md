@@ -12,3 +12,4 @@
     * [群接口](reference/server-api/7.群接口.md)
     * [好友管理接口](reference/server-api/8.好友管理接口.md)
     * [文件操作接口](reference/server-api/9.文件操作接口.md)
+    * [API](reference/server-api/美信拓扑服务端API文档.md)
