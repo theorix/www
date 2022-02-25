@@ -1,4 +1,4 @@
-rosterManage {#module_rostermanage}
+# rosterManage {#module_rostermanage}
 好友管理
 
 

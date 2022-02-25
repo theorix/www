@@ -1,4 +1,4 @@
-sysManage {#module_sysmanage}
+# sysManage {#module_sysmanage}
 
 * [sysManage](#module_sysmanage)
     * [.sendRosterMessage(msg)](#module_sysmanage.sendrostermessage) ⇒ <code>number</code>
