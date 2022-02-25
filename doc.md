@@ -1,6 +1,6 @@
 # doc
 
-### Modules
+## Modules
 
 [groupManage](doc.md#module\_groupManage)
 
@@ -12,7 +12,7 @@
 
 [sysManage](doc.md#module\_sysManage)[userManage](doc.md#module\_userManage)[types](doc.md#module\_types)[flooim](doc.md#module\_flooim)
 
-### groupManage
+## groupManage
 
 群管理
 
@@ -74,7 +74,7 @@
   * [.asyncFileDelete(params)](doc.md#module\_groupManage.asyncFileDelete) ⇒ `Promise.<Array.<module:types~GroupSharedFileResponse>>`
   * [.asyncFileUpload(params)](doc.md#module\_groupManage.asyncFileUpload) ⇒ `Promise.<Array.<module:types~GroupSharedFile>>`
 
-#### groupManage.asyncGetGroupInfo(group\_id, froce) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
+### groupManage.asyncGetGroupInfo(group\_id, froce) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
 
 获取群信息
 
@@ -86,7 +86,7 @@
 | group\_id | `number`  | 群ID                                          |
 | froce     | `boolean` | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-#### groupManage.asyncGetJoinedGroups(froce) ⇒ `Promise.<Array.<number>>`
+### groupManage.asyncGetJoinedGroups(froce) ⇒ `Promise.<Array.<number>>`
 
 获取加入的群组
 
@@ -97,7 +97,7 @@
 | ----- | --------- | -------------------------------------------- |
 | froce | `boolean` | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-#### groupManage.openGroup(group\_id)
+### groupManage.openGroup(group\_id)
 
 打开群组， 此方法会准备群组聊天界面的一些必备信息。
 
@@ -107,7 +107,7 @@
 | --------- | -------- | ----------- |
 | group\_id | `number` | 群组ID        |
 
-#### groupManage.getAllGroupDetail() ⇒ `Object.<number, module:types~GroupInfoAndSettings>`
+### groupManage.getAllGroupDetail() ⇒ `Object.<number, module:types~GroupInfoAndSettings>`
 
 获取缓存的所有群组详情
 
@@ -115,7 +115,7 @@
 **Returns**: `Object.<number, module:types~GroupInfoAndSettings>` - 群组详情\
 
 
-#### groupManage.asyncGetGroupMembers(group\_id) ⇒ `Promise.<Array.<module:types~GroupMember>>`
+### groupManage.asyncGetGroupMembers(group\_id) ⇒ `Promise.<Array.<module:types~GroupMember>>`
 
 获取群组成员（异步）
 
@@ -126,7 +126,7 @@
 | --------- | -------- | ----------- |
 | group\_id | `number` | 群组ID        |
 
-#### groupManage.getGroupMembers(group\_id) ⇒ [`Array.<GroupMember>`](doc.md#module\_types..GroupMember)
+### groupManage.getGroupMembers(group\_id) ⇒ [`Array.<GroupMember>`](doc.md#module\_types..GroupMember)
 
 获取群组成员（同步）
 
@@ -137,7 +137,7 @@
 | --------- | -------- | ----------- |
 | group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncGetGroupListDetail(gids) ⇒ `Promise.<Array.<module:types~BriefGroupInfoAndSettings>>`
+### groupManage.asyncGetGroupListDetail(gids) ⇒ `Promise.<Array.<module:types~BriefGroupInfoAndSettings>>`
 
 按id获取群组详情
 
@@ -148,7 +148,7 @@
 | ----- | ---------------- | ----------- |
 | gids  | `Array.<number>` | 群组ID列表      |
 
-#### groupManage.getGruopMessage(gid) ⇒ [`Array.<Meta>`](doc.md#module\_types..Meta)
+### groupManage.getGruopMessage(gid) ⇒ [`Array.<Meta>`](doc.md#module\_types..Meta)
 
 获取群消息
 
@@ -159,7 +159,7 @@
 | ----- | -------- | ----------- |
 | gid   | `number` | 群ID         |
 
-#### groupManage.asyncGetInfo(params) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
+### groupManage.asyncGetInfo(params) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
 
 获取群组详情
 
@@ -171,7 +171,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncGetMemberList(param) ⇒ `Promise.<Array.<module:types~GroupMember>>`
+### groupManage.asyncGetMemberList(param) ⇒ `Promise.<Array.<module:types~GroupMember>>`
 
 获取群成员列表
 
@@ -183,7 +183,7 @@
 | param            | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.readGroupMessage(group\_id, mid)
+### groupManage.readGroupMessage(group\_id, mid)
 
 将群消息设置已读
 
@@ -194,7 +194,7 @@
 | group\_id | `number` | 群组ID        |
 | mid       | `number` | 消息ID        |
 
-#### groupManage.recallMessage(uid, mid)
+### groupManage.recallMessage(uid, mid)
 
 撤回消息
 
@@ -205,7 +205,7 @@
 | uid   | `number` | 群组ID        |
 | mid   | `number` | 消息ID        |
 
-#### groupManage.getUnreadCount(gid) ⇒ `number`
+### groupManage.getUnreadCount(gid) ⇒ `number`
 
 获取群未读消息数
 
@@ -216,7 +216,7 @@
 | ----- | -------- | ----------- |
 | gid   | `number` | 群组ID        |
 
-#### groupManage.asyncGetAdminList(params) ⇒ `Promise.<Array.<module:types~GroupMember>>`
+### groupManage.asyncGetAdminList(params) ⇒ `Promise.<Array.<module:types~GroupMember>>`
 
 获取群管理员列表
 
@@ -228,7 +228,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncAdminAdd(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncAdminAdd(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 群添加管理员
 
@@ -241,7 +241,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncAdminRemove(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncAdminRemove(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 移除管理员
 
@@ -254,7 +254,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncGetAnouncementById(params) ⇒ [`Promise.<GroupAnnouncement>`](doc.md#module\_types..GroupAnnouncement)
+### groupManage.asyncGetAnouncementById(params) ⇒ [`Promise.<GroupAnnouncement>`](doc.md#module\_types..GroupAnnouncement)
 
 获取群公告详情
 
@@ -267,7 +267,7 @@
 | params.group\_id        | `number`         | 群组ID        |
 | params.announcement\_id | `Array.<number>` | 公告ID        |
 
-#### groupManage.asyncAnouncementDelete(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncAnouncementDelete(params) ⇒ `Promise.<boolean>`
 
 删除群公告
 
@@ -280,7 +280,7 @@
 | params.group\_id        | `number`         | 群组ID        |
 | params.announcement\_id | `Array.<number>` | 公告ID        |
 
-#### groupManage.asyncAnnouncementEdit(params) ⇒ [`Promise.<GroupAnnouncement>`](doc.md#module\_types..GroupAnnouncement)
+### groupManage.asyncAnnouncementEdit(params) ⇒ [`Promise.<GroupAnnouncement>`](doc.md#module\_types..GroupAnnouncement)
 
 编辑群公告
 
@@ -294,7 +294,7 @@
 | params.title     | `string` | 公告标题        |
 | params.content   | `string` | 公告内容        |
 
-#### groupManage.asyncGetAnnouncementList(params) ⇒ `Promise.<Array.<module:types~GroupAnnouncement>>`
+### groupManage.asyncGetAnnouncementList(params) ⇒ `Promise.<Array.<module:types~GroupAnnouncement>>`
 
 群公告列表
 
@@ -306,7 +306,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncCreate(params) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
+### groupManage.asyncCreate(params) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
 
 创建群组
 
@@ -317,7 +317,7 @@
 | ------ | ------------------------------------------------------------ | ----------- |
 | params | [`GroupInfoRequest`](doc.md#module\_types..GroupInfoRequest) | 请求参数        |
 
-#### groupManage.asyncDestroy(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncDestroy(params) ⇒ `Promise.<boolean>`
 
 解散群组
 
@@ -329,7 +329,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncUpdateAvatar(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateAvatar(params) ⇒ `Promise.<boolean>`
 
 更新群头像
 
@@ -342,7 +342,7 @@
 | params.group\_id | `number` | 群组ID        |
 | params.value     | `string` | 头像地址        |
 
-#### groupManage.asyncUpdateDescription(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateDescription(params) ⇒ `Promise.<boolean>`
 
 更新群描述
 
@@ -355,7 +355,7 @@
 | params.group\_id | `number` | 群组ID        |
 | params.value     | `string` | 群组描述        |
 
-#### groupManage.asyncUpdateExt(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateExt(params) ⇒ `Promise.<boolean>`
 
 更新群扩展信息
 
@@ -368,7 +368,7 @@
 | params.group\_id | `number` | 群组ID        |
 | params.value     | `string` | 扩展信息        |
 
-#### groupManage.asyncUpdateName(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateName(params) ⇒ `Promise.<boolean>`
 
 更新群名称
 
@@ -381,7 +381,7 @@
 | params.group\_id | `number` | 群组ID        |
 | params.value     | `string` | 群名称         |
 
-#### groupManage.asyncGroupMsgMutemode(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncGroupMsgMutemode(params) ⇒ `Promise.<boolean>`
 
 设置群消息免打扰情况
 
@@ -394,7 +394,7 @@
 | params.group\_id       | `number` | 群组ID                                                 |
 | params.msg\_mute\_mode | `number` | 群消息屏蔽模式: 0 - 表示不屏蔽, 1 - 表示屏蔽本地消息通知, 2 - 表示屏蔽消息，不接收消息 |
 
-#### groupManage.asyncGroupBannedList(params) ⇒ `Promise.<Array.<module:types~GroupMemberBanned>>`
+### groupManage.asyncGroupBannedList(params) ⇒ `Promise.<Array.<module:types~GroupMemberBanned>>`
 
 获取群禁言列表
 
@@ -406,7 +406,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncGroupBab(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncGroupBab(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 禁言群成员
 
@@ -417,7 +417,7 @@
 | ------ | ---------------------------------------------------------------------------- | ----------- |
 | params | [`GroupBannedMemberRequest`](doc.md#module\_types..GroupBannedMemberRequest) | 请求参数        |
 
-#### groupManage.asyncGroupUnban(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncGroupUnban(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 解除成员禁言
 
@@ -430,7 +430,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncGetSettings(group\_id) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
+### groupManage.asyncGetSettings(group\_id) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
 
 获取群设置
 
@@ -441,7 +441,7 @@
 | --------- | -------- | ----------- |
 | group\_id | `number` | 群ID         |
 
-#### groupManage.asyncUpdateAllowMemberInvitation(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateAllowMemberInvitation(params) ⇒ `Promise.<boolean>`
 
 设置群成员是否可以邀请
 
@@ -454,7 +454,7 @@
 | params.group\_id | `number`  | 群组ID                                    |
 | params.value     | `boolean` | 群成员邀请设置: false - 不允许邀请, true - 允许邀请(默认) |
 
-#### groupManage.asyncUpdateAllowMemberModify(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateAllowMemberModify(params) ⇒ `Promise.<boolean>`
 
 设置群成员是否可以修改群信息
 
@@ -467,7 +467,7 @@
 | params.group\_id | `number`  | 群组ID                                                  |
 | params.value     | `boolean` | 群成员修改群信息设置: false - 群成员不能修改群信息(默认), true - 群成员可以修改群信息 |
 
-#### groupManage.asyncUpdateEnableReadack(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateEnableReadack(params) ⇒ `Promise.<boolean>`
 
 设置群是否开启已读模式
 
@@ -480,7 +480,7 @@
 | params.group\_id | `number`  | 群组ID                                |
 | params.value     | `boolean` | 是否开启群消息已读功能: false - 不开启, true - 开启 |
 
-#### groupManage.asyncUpdateHistoryVisible(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateHistoryVisible(params) ⇒ `Promise.<boolean>`
 
 设置群历史是否可见
 
@@ -493,7 +493,7 @@
 | params.group\_id | `number`  | 群组ID                              |
 | params.value     | `boolean` | 设置群历史是否可见: false - 不可见, true - 可见 |
 
-#### groupManage.asyncUpdateRequireadminapproval(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateRequireadminapproval(params) ⇒ `Promise.<boolean>`
 
 设置入群是否需要申请
 
@@ -506,7 +506,7 @@
 | params.group\_id       | `number`  | 群组ID                                  |
 | params.apply\_approval | `boolean` | 入群申请审批设置, 0:同意所有申请 1:需要管理员确认 2:拒绝所有申请 |
 
-#### groupManage.asyncBanAll(params) ⇒ [`Promise.<GroupBanAllResponse>`](doc.md#module\_types..GroupBanAllResponse)
+### groupManage.asyncBanAll(params) ⇒ [`Promise.<GroupBanAllResponse>`](doc.md#module\_types..GroupBanAllResponse)
 
 全员禁言，只允许管理员发消息
 
@@ -519,7 +519,7 @@
 | params.duration  | `number` | 禁言时长，单位为分钟,int64 |
 | params.group\_id | `number` | 群id,int64        |
 
-#### groupManage.asyncUnBanAll(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUnBanAll(params) ⇒ `Promise.<boolean>`
 
 取消全员禁言
 
@@ -531,7 +531,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群id,int64   |
 
-#### groupManage.asyncOwnerTransfer(params) ⇒ [`Promise.<GroupUserRelationResponse>`](doc.md#module\_types..GroupUserRelationResponse)
+### groupManage.asyncOwnerTransfer(params) ⇒ [`Promise.<GroupUserRelationResponse>`](doc.md#module\_types..GroupUserRelationResponse)
 
 更换群主
 
@@ -544,7 +544,7 @@
 | params.group\_id  | `number` | 群组ID        |
 | params.new\_owner | `number` | 新群主的用户ID    |
 
-#### groupManage.asyncGetUserJoined(params) ⇒ `Promise.<Array.<number>>`
+### groupManage.asyncGetUserJoined(params) ⇒ `Promise.<Array.<number>>`
 
 获取用户的群组列表
 
@@ -555,7 +555,7 @@
 | ------ | -------- | ----------- |
 | params | `object` | 参数, 空对象     |
 
-#### groupManage.asyncApply(params) ⇒ [`Promise.<GroupUserRelationResponse>`](doc.md#module\_types..GroupUserRelationResponse)
+### groupManage.asyncApply(params) ⇒ [`Promise.<GroupUserRelationResponse>`](doc.md#module\_types..GroupUserRelationResponse)
 
 申请加入群
 
@@ -568,7 +568,7 @@
 | params.group\_id | `number` | 群组ID        |
 | params.reason    | `string` | 申请入群原因      |
 
-#### groupManage.asyncApplyHandle(params) ⇒ [`Promise.<GroupUserRelationResponse>`](doc.md#module\_types..GroupUserRelationResponse)
+### groupManage.asyncApplyHandle(params) ⇒ [`Promise.<GroupUserRelationResponse>`](doc.md#module\_types..GroupUserRelationResponse)
 
 处理用户的入群申请
 
@@ -582,7 +582,7 @@
 | params.user\_id  | `number`  | 用户ID                  |
 | params.approval  | `boolean` | 审批结果：true为同意，false为拒绝 |
 
-#### groupManage.asyncGroupBockedlist(params) ⇒ `Promise.<Array.<module:types~GroupBlockedListItem>>`
+### groupManage.asyncGroupBockedlist(params) ⇒ `Promise.<Array.<module:types~GroupBlockedListItem>>`
 
 获取群黑名单
 
@@ -594,7 +594,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncGroupBlock(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncGroupBlock(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 将成员加入黑名单
 
@@ -607,7 +607,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncGroupUnblock(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncGroupUnblock(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 解除黑名单
 
@@ -620,7 +620,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncKick(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncKick(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 踢出群组
 
@@ -633,7 +633,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncGetInvitationList() ⇒ `Promise.<Array.<module:types~GroupInvitation>>`
+### groupManage.asyncGetInvitationList() ⇒ `Promise.<Array.<module:types~GroupInvitation>>`
 
 获取群邀请列表
 
@@ -641,7 +641,7 @@
 **Returns**: `Promise.<Array.<module:types~GroupInvitation>>` - 群邀请列表\
 
 
-#### groupManage.asyncInvite(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
+### groupManage.asyncInvite(params) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
 
 邀请成员加入群
 
@@ -654,7 +654,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncInviteHandle(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncInviteHandle(params) ⇒ `Promise.<boolean>`
 
 处理群邀请
 
@@ -668,7 +668,7 @@
 | params.user\_id  | `number`  | 用户ID                  |
 | params.approval  | `boolean` | 审批结果：true为同意，false为拒绝 |
 
-#### groupManage.asyncGetMemberDisplayName(params) ⇒ `Promise.<Array.<module:types~GroupMember>>`
+### groupManage.asyncGetMemberDisplayName(params) ⇒ `Promise.<Array.<module:types~GroupMember>>`
 
 批量获取群成员的群名片
 
@@ -681,7 +681,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.user\_list | `Array.<number>` | 群成员列表       |
 
-#### groupManage.asyncLeave(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncLeave(params) ⇒ `Promise.<boolean>`
 
 退出群
 
@@ -693,7 +693,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncUpdateDisplayName(params) ⇒ `Promise.<boolean>`
+### groupManage.asyncUpdateDisplayName(params) ⇒ `Promise.<boolean>`
 
 修改群名片
 
@@ -706,7 +706,7 @@
 | params.group\_id | `number` | 群组ID        |
 | params.value     | `string` | 新名片         |
 
-#### groupManage.asncGetApplicationList(params) ⇒ `Promise.<Array.<module:types~GroupApplication>>`
+### groupManage.asncGetApplicationList(params) ⇒ `Promise.<Array.<module:types~GroupApplication>>`
 
 获取群申请列表
 
@@ -718,7 +718,7 @@
 | params             | `object`         | 参数          |
 | params.group\_list | `Array.<number>` | 群列表         |
 
-#### groupManage.asyncGetFileList(params) ⇒ `Promise.<Array.<module:types~GroupSharedFile>>`
+### groupManage.asyncGetFileList(params) ⇒ `Promise.<Array.<module:types~GroupSharedFile>>`
 
 获取群文件列表
 
@@ -730,7 +730,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### groupManage.asyncFileDelete(params) ⇒ `Promise.<Array.<module:types~GroupSharedFileResponse>>`
+### groupManage.asyncFileDelete(params) ⇒ `Promise.<Array.<module:types~GroupSharedFileResponse>>`
 
 删除群文件
 
@@ -743,7 +743,7 @@
 | params.group\_id  | `number`         | 群组ID        |
 | params.file\_list | `Array.<number>` | 文件ID列表      |
 
-#### groupManage.asyncFileUpload(params) ⇒ `Promise.<Array.<module:types~GroupSharedFile>>`
+### groupManage.asyncFileUpload(params) ⇒ `Promise.<Array.<module:types~GroupSharedFile>>`
 
 上传群文件
 
@@ -759,7 +759,7 @@
 | params.type      | `string` | 文件类型        |
 | params.url       | `string` | 文件url       |
 
-### rosterManage
+## rosterManage
 
 好友管理
 
@@ -789,7 +789,7 @@
   * [.asyncSearchRosterByName(params)](doc.md#module\_rosterManage.asyncSearchRosterByName) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
   * [.asyncSearchRosterById(params)](doc.md#module\_rosterManage.asyncSearchRosterById) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
 
-#### rosterManage.asyncGetRosterIdList(force) ⇒ `Promise.<Array.<number>>`
+### rosterManage.asyncGetRosterIdList(force) ⇒ `Promise.<Array.<number>>`
 
 获取好友id列表
 
@@ -800,7 +800,7 @@
 | ----- | --------- | ----------------------------------------- |
 | force | `boolean` | 是否强制从服务器拉取：true - 从服务器获取， false - 从本地存储获取 |
 
-#### rosterManage.asyncGetRosterInfo(roster\_id, force) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
+### rosterManage.asyncGetRosterInfo(roster\_id, force) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
 
 获取好友信息
 
@@ -812,7 +812,7 @@
 | roster\_id | `number`  | 好友ID                                         |
 | force      | `boolean` | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-#### rosterManage.asyncRegester(opt) ⇒ [`Promise.<UserSettings>`](doc.md#module\_types..UserSettings)
+### rosterManage.asyncRegester(opt) ⇒ [`Promise.<UserSettings>`](doc.md#module\_types..UserSettings)
 
 用户注册
 
@@ -825,7 +825,7 @@
 | opt.username | `string` | 用户名         |
 | opt.password | `string` | 密码          |
 
-#### rosterManage.asyncDeleteRoster(param) ⇒ `Promise.<boolean>`
+### rosterManage.asyncDeleteRoster(param) ⇒ `Promise.<boolean>`
 
 删除好友
 
@@ -837,7 +837,7 @@
 | param          | `object` | 参数          |
 | param.user\_id | `number` | 好友的用户ID     |
 
-#### rosterManage.asnycGetRosterListDetailByIds(roster\_ids) ⇒ `Promise.<Array.<module:types~RosterItem>>`
+### rosterManage.asnycGetRosterListDetailByIds(roster\_ids) ⇒ `Promise.<Array.<module:types~RosterItem>>`
 
 根据id列表获取用户详细信息
 
@@ -848,7 +848,7 @@
 | ----------- | ---------------- | ----------- |
 | roster\_ids | `Array.<number>` | 用户ID列表      |
 
-#### rosterManage.getAllRosterDetail() ⇒ [`Array.<RosterItem>`](doc.md#module\_types..RosterItem)
+### rosterManage.getAllRosterDetail() ⇒ [`Array.<RosterItem>`](doc.md#module\_types..RosterItem)
 
 获取缓存的所有用户详细信息
 
@@ -856,7 +856,7 @@
 **Returns**: [`Array.<RosterItem>`](doc.md#module\_types..RosterItem) - 用户详细信息列表\
 
 
-#### rosterManage.asyncGetUserProfile(force) ⇒ [`Promise.<UserProfile>`](doc.md#module\_types..UserProfile)
+### rosterManage.asyncGetUserProfile(force) ⇒ [`Promise.<UserProfile>`](doc.md#module\_types..UserProfile)
 
 获取自己的用户信息
 
@@ -867,7 +867,7 @@
 | ----- | --------- | -------------------------------------------- |
 | force | `boolean` | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-#### rosterManage.getRosterMessageByRid(uid) ⇒ [`Array.<Meta>`](doc.md#module\_types..Meta)
+### rosterManage.getRosterMessageByRid(uid) ⇒ [`Array.<Meta>`](doc.md#module\_types..Meta)
 
 根据会话ID获取聊天消息
 
@@ -878,7 +878,7 @@
 | ----- | -------- | ----------- |
 | uid   | `number` | 会话ID        |
 
-#### rosterManage.readRosterMessage(roster\_id, mid)
+### rosterManage.readRosterMessage(roster\_id, mid)
 
 修改消息状态为已读
 
@@ -889,7 +889,7 @@
 | roster\_id | `number` | 会话ID        |
 | mid        | `number` | 消息ID        |
 
-#### rosterManage.recallMessage(uid, mid)
+### rosterManage.recallMessage(uid, mid)
 
 撤回消息，只能撤回5分钟内的
 
@@ -900,7 +900,7 @@
 | uid   | `number` | 会话ID        |
 | mid   | `number` | 消息ID        |
 
-#### rosterManage.unreadMessage(uid, mid)
+### rosterManage.unreadMessage(uid, mid)
 
 设置消息成未读
 
@@ -911,7 +911,7 @@
 | uid   | `number` | 会话ID        |
 | mid   | `number` | 消息ID        |
 
-#### rosterManage.deleteMessage(uid, mid)
+### rosterManage.deleteMessage(uid, mid)
 
 删除消息
 
@@ -922,7 +922,7 @@
 | uid   | `number` | 会话ID        |
 | mid   | `number` | 消息ID        |
 
-#### rosterManage.getRosterInfo(rid) ⇒ [`RosterItem`](doc.md#module\_types..RosterItem)
+### rosterManage.getRosterInfo(rid) ⇒ [`RosterItem`](doc.md#module\_types..RosterItem)
 
 获取好友信息
 
@@ -933,7 +933,7 @@
 | ----- | -------- | ----------- |
 | rid   | `number` | 好友ID        |
 
-#### rosterManage.getUnreadCount(uid) ⇒ `number`
+### rosterManage.getUnreadCount(uid) ⇒ `number`
 
 获取指定会话的未读数
 
@@ -944,7 +944,7 @@
 | ----- | -------- | ----------- |
 | uid   | `number` | 会话IID       |
 
-#### rosterManage.asyncGetApplyList(params) ⇒ `Promise.<Array.<module:types~RosterApplication>>`
+### rosterManage.asyncGetApplyList(params) ⇒ `Promise.<Array.<module:types~RosterApplication>>`
 
 获取好友申请列表
 
@@ -956,7 +956,7 @@
 | params        | `object` | 参数                    |
 | params.cursor | `number` | 从哪开始获取：可以传空字符串表示从头开始取 |
 
-#### rosterManage.asyncGetBlockedlist(params) ⇒ `Promise.<Array.<number>>`
+### rosterManage.asyncGetBlockedlist(params) ⇒ `Promise.<Array.<number>>`
 
 获取黑名单
 
@@ -967,7 +967,7 @@
 | ------ | -------- | ----------- |
 | params | `object` | 参数：空对象      |
 
-#### rosterManage.asyncBlockeAdd(params) ⇒ `Promise.<boolean>`
+### rosterManage.asyncBlockeAdd(params) ⇒ `Promise.<boolean>`
 
 加入黑名单
 
@@ -979,7 +979,7 @@
 | params          | `object` | 参数          |
 | params.user\_id | `number` | 用户ID        |
 
-#### rosterManage.asyncBlockeRemove(params) ⇒ `Promise.<boolean>`
+### rosterManage.asyncBlockeRemove(params) ⇒ `Promise.<boolean>`
 
 移除黑名单
 
@@ -991,7 +991,7 @@
 | params          | `object` | 参数          |
 | params.user\_id | `number` | 用户ID        |
 
-#### rosterManage.asyncApply(params) ⇒ `Promise.<boolean>`
+### rosterManage.asyncApply(params) ⇒ `Promise.<boolean>`
 
 请求加为好友
 
@@ -1004,7 +1004,7 @@
 | params.user\_id | `number` | 用户ID        |
 | params.alias    | `string` | 备注          |
 
-#### rosterManage.asyncAccept(params) ⇒ `Promise.<boolean>`
+### rosterManage.asyncAccept(params) ⇒ `Promise.<boolean>`
 
 通过好友申请
 
@@ -1016,7 +1016,7 @@
 | params          | `object` | 参数          |
 | params.user\_id | `number` | 用户ID        |
 
-#### rosterManage.asyncDecline(params) ⇒ `Promise.<boolean>`
+### rosterManage.asyncDecline(params) ⇒ `Promise.<boolean>`
 
 拒绝好友申请
 
@@ -1028,7 +1028,7 @@
 | params          | `object` | 参数          |
 | params.user\_id | `number` | 用户ID        |
 
-#### rosterManage.asyncUpdateRosterExt(params) ⇒ `Promise.<boolean>`
+### rosterManage.asyncUpdateRosterExt(params) ⇒ `Promise.<boolean>`
 
 修改好友扩展字段
 
@@ -1041,7 +1041,7 @@
 | params.user\_id | `number` | 用户ID        |
 | params.ext      | `string` | 扩展字段        |
 
-#### rosterManage.asyncSearchRosterByName(params) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
+### rosterManage.asyncSearchRosterByName(params) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
 
 按名称搜索用户
 
@@ -1053,7 +1053,7 @@
 | params          | `object` | 参数          |
 | params.username | `string` | 用户名         |
 
-#### rosterManage.asyncSearchRosterById(params) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
+### rosterManage.asyncSearchRosterById(params) ⇒ [`Promise.<RosterItem>`](doc.md#module\_types..RosterItem)
 
 按ID搜索用户
 
@@ -1065,7 +1065,7 @@
 | params          | `object` | 参数          |
 | params.user\_id | `number` | 用户ID        |
 
-### sysManage
+## sysManage
 
 * [sysManage](doc.md#module\_sysManage)
   * [.sendRosterMessage(msg)](doc.md#module\_sysManage.sendRosterMessage) ⇒ `number`
@@ -1081,7 +1081,7 @@
   * [.asyncGetGroupAvatarUploadUrl(params)](doc.md#module\_sysManage.asyncGetGroupAvatarUploadUrl) ⇒ [`Promise.<FileUpload>`](doc.md#module\_types..FileUpload)
   * [.asyncGetFileUploadChatFileUrl(params)](doc.md#module\_sysManage.asyncGetFileUploadChatFileUrl) ⇒ [`Promise.<FileUpload>`](doc.md#module\_types..FileUpload)
 
-#### sysManage.sendRosterMessage(msg) ⇒ `number`
+### sysManage.sendRosterMessage(msg) ⇒ `number`
 
 发送单聊消息
 
@@ -1097,7 +1097,7 @@
 | msg.ext        | `string` \| `object` | 扩展字段                                                                                                     |
 | msg.attachment | `string` \| `object` | 附件信息                                                                                                     |
 
-#### sysManage.sendGroupMessage(msg) ⇒ `number`
+### sysManage.sendGroupMessage(msg) ⇒ `number`
 
 发送群聊消息
 
@@ -1114,7 +1114,7 @@
 | msg.attachment | `string` \| `object` | 附件信息                                                                                                     |
 | msg.priority   | `number`             | 设置消息的扩散优先级，默认为0。0表示扩散，数字越小扩散的越多。                                                                         |
 
-#### sysManage.requireHistoryMessage(uid, sid, amount)
+### sysManage.requireHistoryMessage(uid, sid, amount)
 
 请求历史消息
 
@@ -1126,7 +1126,7 @@
 | sid    | `number` | 消息ID: 从哪个消息向前拉取，传0表示从最新一条消息开始拉取。 |
 | amount | `number` | 拉取的条数                            |
 
-#### sysManage.sendMentionMessage(params) ⇒ `number`
+### sysManage.sendMentionMessage(params) ⇒ `number`
 
 群发送@消息
 
@@ -1144,7 +1144,7 @@
 | params.mentionedMessage | `string`         | @消息的推送内容    |
 | params.senderNickname   | `string`         | 发送者昵称       |
 
-#### sysManage.sendInputStatusMessage(uid, status) ⇒ `number`
+### sysManage.sendInputStatusMessage(uid, status) ⇒ `number`
 
 发送输入状态消息
 
@@ -1156,7 +1156,7 @@
 | uid    | `number` | 会话ID                             |
 | status | `string` | 状态： nothing - 未输入， typing - 正在输入 |
 
-#### sysManage.forwardMessage(param) ⇒ `number`
+### sysManage.forwardMessage(param) ⇒ `number`
 
 转发消息
 
@@ -1170,7 +1170,7 @@
 | param.gid | `number` | 接收方群组ID（仅转发群聊时设置） |
 | param.mid | `number` | 要转发的消息ID          |
 
-#### sysManage.getMessageStatus(cid, mid, isGroup) ⇒ `string`
+### sysManage.getMessageStatus(cid, mid, isGroup) ⇒ `string`
 
 获取消息的状态
 
@@ -1183,7 +1183,7 @@
 | mid     | `number`  |         | 消息ID        |
 | isGroup | `boolean` | `false` | 是否是群聊       |
 
-#### sysManage.asyncFileUpload(param) ⇒ [`Promise.<FileUploadResult>`](doc.md#module\_types..FileUploadResult)
+### sysManage.asyncFileUpload(param) ⇒ [`Promise.<FileUploadResult>`](doc.md#module\_types..FileUploadResult)
 
 上传文件
 
@@ -1201,7 +1201,7 @@
 | param.chatType        | `number`                                                         | 聊天类型： roster - 单聊, group - 群聊                                                                                                                                                          |
 | param.processCallback | [`fileUploadProgress`](doc.md#module\_types..fileUploadProgress) | 上传进度回调                                                                                                                                                                                 |
 
-#### sysManage.getImage(param) ⇒ `string`
+### sysManage.getImage(param) ⇒ `string`
 
 拼装图片路径
 
@@ -1216,7 +1216,7 @@
 | param.thumbnail | `boolean` | 是否缩略图：默认为true              |
 | param.sdefault  | `string`  | 默认图片地址                     |
 
-#### sysManage.deleteConversation(id, other\_devices)
+### sysManage.deleteConversation(id, other\_devices)
 
 删除会话
 
@@ -1227,7 +1227,7 @@
 | id             | `number`  |         | 会话ID           |
 | other\_devices | `boolean` | `true`  | 是否同时删除其它设备上的会话 |
 
-#### sysManage.asyncGetGroupAvatarUploadUrl(params) ⇒ [`Promise.<FileUpload>`](doc.md#module\_types..FileUpload)
+### sysManage.asyncGetGroupAvatarUploadUrl(params) ⇒ [`Promise.<FileUpload>`](doc.md#module\_types..FileUpload)
 
 获取上传群头像URL
 
@@ -1239,7 +1239,7 @@
 | params           | `object` | 参数          |
 | params.group\_id | `number` | 群组ID        |
 
-#### sysManage.asyncGetFileUploadChatFileUrl(params) ⇒ [`Promise.<FileUpload>`](doc.md#module\_types..FileUpload)
+### sysManage.asyncGetFileUploadChatFileUrl(params) ⇒ [`Promise.<FileUpload>`](doc.md#module\_types..FileUpload)
 
 获取聊天文件上传地址
 
@@ -1253,7 +1253,7 @@
 | params.to\_type   | `number` | 会话类型： 1 - 用户，2 - 群组                                                                                                                           |
 | params.to\_id     | `number` | 会话ID                                                                                                                                          |
 
-### userManage
+## userManage
 
 * [userManage](doc.md#module\_userManage)
   * [.getToken()](doc.md#module\_userManage.getToken) ⇒ `string`
@@ -1267,7 +1267,7 @@
   * [.asyncGetSettings()](doc.md#module\_userManage.asyncGetSettings) ⇒ [`Promise.<UserSettings>`](doc.md#module\_types..UserSettings)
   * [.asyncUpdateSettings(settings)](doc.md#module\_userManage.asyncUpdateSettings) ⇒ `Promise.<boolean>`
 
-#### userManage.getToken() ⇒ `string`
+### userManage.getToken() ⇒ `string`
 
 获取登录用户的token
 
@@ -1275,7 +1275,7 @@
 **Returns**: `string` - 用户的token\
 
 
-#### userManage.getUid() ⇒ `number`
+### userManage.getUid() ⇒ `number`
 
 获取登录用户的uid
 
@@ -1283,7 +1283,7 @@
 **Returns**: `number` - 用户ID\
 
 
-#### userManage.getAppid() ⇒ `string`
+### userManage.getAppid() ⇒ `string`
 
 获取appid
 
@@ -1291,14 +1291,14 @@
 **Returns**: `string` - APP ID\
 
 
-#### userManage.getConversationList() ⇒ [`Array.<ConversationItem>`](doc.md#module\_types..ConversationItem)
+### userManage.getConversationList() ⇒ [`Array.<ConversationItem>`](doc.md#module\_types..ConversationItem)
 
 获取最近会话列表
 
 **Kind**: static method of [`userManage`](doc.md#module\_userManage)\
 
 
-#### userManage.asyncUpdateAvatar(params) ⇒ `Promise.<boolean>`
+### userManage.asyncUpdateAvatar(params) ⇒ `Promise.<boolean>`
 
 更新头像
 
@@ -1310,7 +1310,7 @@
 | params        | `object` | 参数          |
 | params.avatar | `string` | 头像 url      |
 
-#### userManage.asyncUpdateNickName(params) ⇒ `Promise.<boolean>`
+### userManage.asyncUpdateNickName(params) ⇒ `Promise.<boolean>`
 
 更新昵称
 
@@ -1322,7 +1322,7 @@
 | params            | `object` | 参数          |
 | params.nick\_name | `string` | 昵称          |
 
-#### userManage.asyncGetProfile() ⇒ [`Promise.<UserProfile>`](doc.md#module\_types..UserProfile)
+### userManage.asyncGetProfile() ⇒ [`Promise.<UserProfile>`](doc.md#module\_types..UserProfile)
 
 获取用户profile
 
@@ -1330,7 +1330,7 @@
 **Returns**: [`Promise.<UserProfile>`](doc.md#module\_types..UserProfile) - 用户信息\
 
 
-#### userManage.asyncUpdateProfile(params) ⇒ `Promise.<boolean>`
+### userManage.asyncUpdateProfile(params) ⇒ `Promise.<boolean>`
 
 更新用户profile
 
@@ -1345,7 +1345,7 @@
 | params.private\_info | `string` | 私有信息，仅自己可见    |
 | params.public\_info  | `string` | 公开信息，好友和陌生人可见 |
 
-#### userManage.asyncGetSettings() ⇒ [`Promise.<UserSettings>`](doc.md#module\_types..UserSettings)
+### userManage.asyncGetSettings() ⇒ [`Promise.<UserSettings>`](doc.md#module\_types..UserSettings)
 
 获取用户设置信息
 
@@ -1353,7 +1353,7 @@
 **Returns**: [`Promise.<UserSettings>`](doc.md#module\_types..UserSettings) - 用户信息\
 
 
-#### userManage.asyncUpdateSettings(settings) ⇒ `Promise.<boolean>`
+### userManage.asyncUpdateSettings(settings) ⇒ `Promise.<boolean>`
 
 修改用户设置
 
@@ -1364,7 +1364,7 @@
 | -------- | ---------------------------------------------------- | ----------- |
 | settings | [`UserSettings`](doc.md#module\_types..UserSettings) | 更新的设置       |
 
-### types
+## types
 
 * [types](doc.md#module\_types)
   * ["flooNotice" (res)](doc.md#event\_flooNotice)
@@ -1422,7 +1422,7 @@
   * [\~Event](doc.md#module\_types..Event) : `string`
   * [\~EventCallback](doc.md#module\_types..EventCallback) : `function`
 
-#### "flooNotice" (res)
+### "flooNotice" (res)
 
 Floo通知
 
@@ -1461,7 +1461,7 @@ Floo通知
 {category: 'userNotice', desc:'CLUSTER_CHANGED'} // 用户所在集群改变 需要重新登录
 ```
 
-#### "flooError" (res)
+### "flooError" (res)
 
 Floo错误
 
@@ -1484,7 +1484,7 @@ Floo错误
 {category: 'DNS_FAILED', desc: dnsServer } // DNS错误: 无法访问
 ```
 
-#### "loginFail" (desc)
+### "loginFail" (desc)
 
 登录失败
 
@@ -1494,7 +1494,7 @@ Floo错误
 | ----- | -------- | ----------- |
 | desc  | `string` | 失败原因        |
 
-#### "loginSuccess" (res)
+### "loginSuccess" (res)
 
 登录成功
 
@@ -1504,7 +1504,7 @@ Floo错误
 | ----- | -------- | ----------- |
 | res   | `object` | 空对象         |
 
-#### "onGroupListUpdate" (meta)
+### "onGroupListUpdate" (meta)
 
 群列表更新
 
@@ -1514,7 +1514,7 @@ Floo错误
 | ----- | --------------------------------------------------- | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) \| `undefined` | 通知消息内容      |
 
-#### "onGroupMemberChanged" (groupId)
+### "onGroupMemberChanged" (groupId)
 
 群成员列表更新
 
@@ -1524,7 +1524,7 @@ Floo错误
 | ------- | -------- | ----------- |
 | groupId | `number` | 群ID         |
 
-#### "onGroupMessage" (meta)
+### "onGroupMessage" (meta)
 
 收到群消息
 
@@ -1534,7 +1534,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 消息内容        |
 
-#### "onInputStatusMessage" (res)
+### "onInputStatusMessage" (res)
 
 对方正在输入
 
@@ -1547,7 +1547,7 @@ Floo错误
 | res.from | `string` | 发送者用户ID     |
 | res.to   | `string` | 接收者用户ID     |
 
-#### "onMentionMessage" (meta)
+### "onMentionMessage" (meta)
 
 收到群组@消息
 
@@ -1557,7 +1557,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 消息内容        |
 
-#### "onMessageCanceled" (res)
+### "onMessageCanceled" (res)
 
 消息被取消已读
 
@@ -1569,7 +1569,7 @@ Floo错误
 | res.uid | `string` | 会话ID        |
 | res.mid | `string` | 消息ID        |
 
-#### "onMessageDeleted" (res)
+### "onMessageDeleted" (res)
 
 消息被删除
 
@@ -1581,7 +1581,7 @@ Floo错误
 | res.uid | `string` | 会话ID        |
 | res.mid | `string` | 消息ID        |
 
-#### "onMessageRecalled" (res)
+### "onMessageRecalled" (res)
 
 消息被撤回
 
@@ -1593,7 +1593,7 @@ Floo错误
 | res.uid | `string` | 会话ID        |
 | res.mid | `string` | 消息ID        |
 
-#### "onMessageStatusChanged" (res)
+### "onMessageStatusChanged" (res)
 
 消息状态变更：撤回/删除/已读
 
@@ -1605,7 +1605,7 @@ Floo错误
 | res.uid | `string` | 会话ID        |
 | res.mid | `string` | 消息ID        |
 
-#### "onReceiveHistoryMsg" (res)
+### "onReceiveHistoryMsg" (res)
 
 收到历史消息
 
@@ -1616,7 +1616,7 @@ Floo错误
 | res      | `object` |             |
 | res.next | `number` | 下次取历史消息的key |
 
-#### "onRosterInfoUpdate" (res)
+### "onRosterInfoUpdate" (res)
 
 好友信息变更
 
@@ -1627,7 +1627,7 @@ Floo错误
 | res           | `object`         |             |
 | res.rosterIds | `Array.<number>` | 好友的用户ID列表   |
 
-#### "onRosterListUpdate" (meta)
+### "onRosterListUpdate" (meta)
 
 好友列表变更
 
@@ -1637,7 +1637,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 好友通知的消息内容   |
 
-#### "onRosterMessage" (meta)
+### "onRosterMessage" (meta)
 
 收到单聊消息
 
@@ -1647,7 +1647,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 消息内容        |
 
-#### "onSendingMessageStatusChanged" (res)
+### "onSendingMessageStatusChanged" (res)
 
 消息发送状态变更
 
@@ -1659,7 +1659,7 @@ Floo错误
 | res.status: | `number` | 发送状态，取值为sending   |
 | res.mid:    | `number` | 客户端生成的client\_mid |
 
-#### "onUnreadChange" (cid)
+### "onUnreadChange" (cid)
 
 未读数改变
 
@@ -1669,14 +1669,14 @@ Floo错误
 | ----- | -------- | ----------- |
 | cid   | `number` | 会话ID        |
 
-#### "recentlistUpdate"
+### "recentlistUpdate"
 
 最近会话更新
 
 **Kind**: event emitted by [`types`](doc.md#module\_types)\
 
 
-#### "onGroupCreated" (meta)
+### "onGroupCreated" (meta)
 
 群组创建通知
 
@@ -1686,7 +1686,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 群通知的消息内容    |
 
-#### "onGroupDestoryed" (meta)
+### "onGroupDestoryed" (meta)
 
 群组解散通知
 
@@ -1696,7 +1696,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 群通知的消息内容    |
 
-#### "onGroupJoined" (meta)
+### "onGroupJoined" (meta)
 
 成员入群通知
 
@@ -1706,7 +1706,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 群通知的消息内容    |
 
-#### "onGroupApplyAccepted" (meta)
+### "onGroupApplyAccepted" (meta)
 
 群申请被通过
 
@@ -1716,7 +1716,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 群通知的消息内容    |
 
-#### "onGroupApplyDeclined" (meta)
+### "onGroupApplyDeclined" (meta)
 
 群申请被拒绝
 
@@ -1726,7 +1726,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 群通知的消息内容    |
 
-#### "onGroupBaned" (meta)
+### "onGroupBaned" (meta)
 
 被群禁言
 
@@ -1736,7 +1736,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 群通知的消息内容    |
 
-#### "onGroupUnbaned" (meta)
+### "onGroupUnbaned" (meta)
 
 被群取消禁言
 
@@ -1746,7 +1746,7 @@ Floo错误
 | ----- | ------------------------------------ | ----------- |
 | meta  | [`Meta`](doc.md#module\_types..Meta) | 群通知的消息内容    |
 
-#### types\~RosterItem : `object`
+### types\~RosterItem : `object`
 
 好友信息
 
@@ -1768,7 +1768,7 @@ Floo错误
 | user\_id           | `number`  | 好友用户ID,int64                                                                      |
 | username           | `string`  | 用户名                                                                               |
 
-#### types\~UserSettings : `object`
+### types\~UserSettings : `object`
 
 用户设置信息
 
@@ -1795,7 +1795,7 @@ Floo错误
 | user\_id              | `number`  | 用户ID,int64                                                                        |
 | vibratory             | `boolean` | 收到消息时否振动                                                                          |
 
-#### types\~UserProfile : `object`
+### types\~UserProfile : `object`
 
 用户信息
 
@@ -1814,7 +1814,7 @@ Floo错误
 | user\_id      | `number` | 用户ID,int64    |
 | username      | `string` | 用户名           |
 
-#### types\~Meta : `object`
+### types\~Meta : `object`
 
 消息体
 
@@ -1835,7 +1835,7 @@ Floo错误
 | timestamp | `string`             | 消息发送时间戳（毫秒）                                                                                              |
 | toType    | `string`             | 接收者类型： roster - 好友， group - 群组                                                                           |
 
-#### types\~RosterApplication : `object`
+### types\~RosterApplication : `object`
 
 加好友申请列表项
 
@@ -1849,7 +1849,7 @@ Floo错误
 | status        | `number` | 状态： 0 - 等待确认， 1 - 接受， 2 - 拒绝。 int32 |
 | user\_id      | `number` | 发起加好友申请的用户ID,int64                  |
 
-#### types\~GroupInfoAndSettings : `object`
+### types\~GroupInfoAndSettings : `object`
 
 群信息
 
@@ -1879,7 +1879,7 @@ Floo错误
 | count             | `number`  | 群成员数                                                                       |
 | capacity          | `number`  | 群容量                                                                        |
 
-#### types\~BriefGroupInfoAndSettings : `object`
+### types\~BriefGroupInfoAndSettings : `object`
 
 群简要信息及用户设置
 
@@ -1900,7 +1900,7 @@ Floo错误
 | status          | `number` | 群状态, 0：正常, 1：已解散,int32                                                     |
 | type            | `number` | 群类型: 1表示公开群，0表示私有群, 2表示聊天室。int32                                           |
 
-#### types\~GroupMember : `object`
+### types\~GroupMember : `object`
 
 群成员格式
 
@@ -1914,7 +1914,7 @@ Floo错误
 | user\_id      | `number` | 用户id,int64   |
 | avatar        | `string` | 头像地址         |
 
-#### types\~GroupMemberBanned : `object`
+### types\~GroupMemberBanned : `object`
 
 禁言成员
 
@@ -1929,7 +1929,7 @@ Floo错误
 | avatar        | `string` | 头像地址         |
 | expired\_time | `number` | 禁言过期时间       |
 
-#### types\~GroupUserRelationResponse : `object`
+### types\~GroupUserRelationResponse : `object`
 
 群用户请求结果
 
@@ -1942,7 +1942,7 @@ Floo错误
 | result   | `string` | 结果          |
 | user\_id | `number` | 用户ID，int64  |
 
-#### types\~GroupAnnouncement : `object`
+### types\~GroupAnnouncement : `object`
 
 群公告内容
 
@@ -1958,7 +1958,7 @@ Floo错误
 | id          | `number` | 公告id,int64   |
 | title       | `string` | 公告标题         |
 
-#### types\~GroupInfoRequest : `object`
+### types\~GroupInfoRequest : `object`
 
 创建群
 
@@ -1973,7 +1973,7 @@ Floo错误
 | type        | `number`         | 群类型 1表示公开群，0表示私有群, 2表示聊天室,int32 |
 | user\_list  | `Array.<number>` | 邀请入群的用户id列表                     |
 
-#### types\~GroupBannedMemberRequest : `object`
+### types\~GroupBannedMemberRequest : `object`
 
 禁言请求
 
@@ -1986,7 +1986,7 @@ Floo错误
 | group\_id  | `number`         | 群id,int64        |
 | user\_list | `Array.<number>` | 用户id列表           |
 
-#### types\~GroupBlockedListItem : `object`
+### types\~GroupBlockedListItem : `object`
 
 群组黑名单
 
@@ -1999,7 +1999,7 @@ Floo错误
 | group\_id  | `number` | 群id,int64   |
 | create\_at | `string` | 创建时间        |
 
-#### types\~GroupInvitation : `object`
+### types\~GroupInvitation : `object`
 
 群组邀请信息
 
@@ -2016,7 +2016,7 @@ Floo错误
 | expire\_time | `number` | 过期时间                          |
 | create\_at   | `string` | 创建时间                          |
 
-#### types\~GroupApplication : `object`
+### types\~GroupApplication : `object`
 
 群申请信息
 
@@ -2031,7 +2031,7 @@ Floo错误
 | expire\_time  | `number` | 过期时间                      |
 | status        | `number` | 状态： 0 - 待处理，1 - 同意，2 - 拒绝 |
 
-#### types\~GroupSharedFile : `object`
+### types\~GroupSharedFile : `object`
 
 群共享文件返回格式
 
@@ -2050,7 +2050,7 @@ Floo错误
 | uploader    | `number` | 共享文件上传者,int64 |
 | url         | `string` | 共享文件url       |
 
-#### types\~GroupSharedFileResponse : `object`
+### types\~GroupSharedFileResponse : `object`
 
 删除群共享文件结果
 
@@ -2063,7 +2063,7 @@ Floo错误
 | reason   | `string` | 原因          |
 | result   | `string` | 结果          |
 
-#### types\~GroupBanAllResponse : `object`
+### types\~GroupBanAllResponse : `object`
 
 全员禁言结果
 
@@ -2074,7 +2074,7 @@ Floo错误
 | ----------------- | -------- | -------------- |
 | ban\_expire\_time | `number` | 全员禁言过期时间,int64 |
 
-#### types\~FileUpload : `object`
+### types\~FileUpload : `object`
 
 文件上传信息
 
@@ -2087,7 +2087,7 @@ Floo错误
 | oss\_body\_param | `object.<string, string>` | 额外参数        |
 | upload\_url      | `string`                  | 上传地址        |
 
-#### types\~FileUploadResult : `object`
+### types\~FileUploadResult : `object`
 
 文件上传结果
 
@@ -2098,7 +2098,7 @@ Floo错误
 | ---- | -------- | ----------- |
 | url  | `string` | 下载地址        |
 
-#### types\~fileUploadProgress : `function`
+### types\~fileUploadProgress : `function`
 
 文件上传进度回调
 
@@ -2110,7 +2110,7 @@ Floo错误
 | res.loaded | `number` | 已下载字节数      |
 | res.total  | `number` | 总字节数        |
 
-#### types\~ConversationItem : `object`
+### types\~ConversationItem : `object`
 
 会话信息
 
@@ -2124,7 +2124,7 @@ Floo错误
 | timestamp | `string` | 消息发送时间戳（毫秒）                   |
 | type      | `string` | 会话类型： roster - 单聊， group - 群聊 |
 
-#### types\~UserProfile : `object`
+### types\~UserProfile : `object`
 
 用户信息
 
@@ -2143,7 +2143,7 @@ Floo错误
 | user\_id      | `number` | 用户ID,int64    |
 | username      | `string` | 用户名           |
 
-#### types\~UserSettings : `object`
+### types\~UserSettings : `object`
 
 用户设置信息
 
@@ -2170,14 +2170,14 @@ Floo错误
 | user\_id              | `number`  | 用户ID,int64                                                                        |
 | vibratory             | `boolean` | 收到消息时否振动                                                                          |
 
-#### types\~Event : `string`
+### types\~Event : `string`
 
 监听事件名称
 
 **Kind**: inner typedef of [`types`](doc.md#module\_types)\
 
 
-#### types\~EventCallback : `function`
+### types\~EventCallback : `function`
 
 监听事件回调
 
@@ -2187,7 +2187,7 @@ Floo错误
 | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
 | res   | [`flooNotice`](doc.md#event\_flooNotice) \| [`flooError`](doc.md#event\_flooError) \| [`loginFail`](doc.md#event\_loginFail) \| [`loginSuccess`](doc.md#event\_loginSuccess) \| [`onGroupListUpdate`](doc.md#event\_onGroupListUpdate) \| [`onGroupMemberChanged`](doc.md#event\_onGroupMemberChanged) \| [`onGroupMessage`](doc.md#event\_onGroupMessage) \| [`onInputStatusMessage`](doc.md#event\_onInputStatusMessage) \| [`onMentionMessage`](doc.md#event\_onMentionMessage) \| [`onMessageCanceled`](doc.md#event\_onMessageCanceled) \| [`onMessageDeleted`](doc.md#event\_onMessageDeleted) \| [`onMessageRecalled`](doc.md#event\_onMessageRecalled) \| [`onMessageStatusChanged`](doc.md#event\_onMessageStatusChanged) \| [`onReceiveHistoryMsg`](doc.md#event\_onReceiveHistoryMsg) \| [`onRosterInfoUpdate`](doc.md#event\_onRosterInfoUpdate) \| [`onRosterListUpdate`](doc.md#event\_onRosterListUpdate) \| [`onRosterMessage`](doc.md#event\_onRosterMessage) \| [`onSendingMessageStatusChanged`](doc.md#event\_onSendingMessageStatusChanged) \| [`onUnreadChange`](doc.md#event\_onUnreadChange) \| [`recentlistUpdate`](doc.md#event\_recentlistUpdate) \| [`onGroupCreated`](doc.md#event\_onGroupCreated) \| [`onGroupDestoryed`](doc.md#event\_onGroupDestoryed) \| [`onGroupJoined`](doc.md#event\_onGroupJoined) \| [`onGroupApplyAccepted`](doc.md#event\_onGroupApplyAccepted) \| [`onGroupApplyDeclined`](doc.md#event\_onGroupApplyDeclined) \| [`onGroupBaned`](doc.md#event\_onGroupBaned) \| [`onGroupUnbaned`](doc.md#event\_onGroupUnbaned) | 事件结果        |
 
-### flooim
+## flooim
 
 * [flooim](doc.md#module\_flooim)
   * [.flooim(config)](doc.md#module\_flooim.flooim) ⇒ `object`
@@ -2200,7 +2200,7 @@ Floo错误
   * [.off(options, ext)](doc.md#module\_flooim.off)
   * [.logout()](doc.md#module\_flooim.logout)
 
-#### flooim.flooim(config) ⇒ `object`
+### flooim.flooim(config) ⇒ `object`
 
 初始化SDK
 
@@ -2228,7 +2228,7 @@ import flooim from 'floo-2.0.0';
 const im = flooim(config);
 ```
 
-#### flooim.login(opt)
+### flooim.login(opt)
 
 登录
 
@@ -2240,7 +2240,7 @@ const im = flooim(config);
 | opt.name     | `string` | 用户名         |
 | opt.password | `string` | 密码          |
 
-#### flooim.qrlogin(opt)
+### flooim.qrlogin(opt)
 
 二维码登录
 
@@ -2252,7 +2252,7 @@ const im = flooim(config);
 | opt.user\_id | `number` | 用户ID        |
 | opt.password | `string` | 密码          |
 
-#### flooim.tokenLogin(opt)
+### flooim.tokenLogin(opt)
 
 token登录
 
@@ -2264,7 +2264,7 @@ token登录
 | opt.user\_id | `number` | 用户ID        |
 | opt.token    | `string` | Token       |
 
-#### flooim.idLogin(opt)
+### flooim.idLogin(opt)
 
 使用用户ID和密码登录
 
@@ -2276,7 +2276,7 @@ token登录
 | opt.user\_id | `number` | 用户ID        |
 | opt.password | `string` | 密码          |
 
-#### flooim.isLogin() ⇒ `boolean`
+### flooim.isLogin() ⇒ `boolean`
 
 是否已登录
 
@@ -2284,7 +2284,7 @@ token登录
 **Returns**: `boolean` - 是否已登录\
 
 
-#### flooim.on(options, ext)
+### flooim.on(options, ext)
 
 事件监听
 
@@ -2311,7 +2311,7 @@ im.on({
  })
 ```
 
-#### flooim.off(options, ext)
+### flooim.off(options, ext)
 
 取消监听
 
@@ -2338,7 +2338,7 @@ const im = flooim(config);
  })
 ```
 
-#### flooim.logout()
+### flooim.logout()
 
 退出账户
 
