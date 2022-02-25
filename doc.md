@@ -20,7 +20,7 @@
   * [.asyncGetGroupInfo(group\_id, froce)](doc.md#module\_groupManage.asyncGetGroupInfo) ⇒ [`Promise.<GroupInfoAndSettings>`](doc.md#module\_types..GroupInfoAndSettings)
   * [.asyncGetJoinedGroups(froce)](doc.md#module\_groupManage.asyncGetJoinedGroups) ⇒ `Promise.<Array.<number>>`
   * [.openGroup(group\_id)](doc.md#module\_groupManage.openGroup)
-  * [.getAllGroupDetail()](doc.md#module\_groupManage.getAllGroupDetail) ⇒ `Object.<number, module:types~GroupInfoAndSettings>`
+  * [.getAllGroupDetail()](#test-link) ⇒ `Object.<number, module:types~GroupInfoAndSettings>`
   * [.asyncGetGroupMembers(group\_id)](doc.md#module\_groupManage.asyncGetGroupMembers) ⇒ `Promise.<Array.<module:types~GroupMember>>`
   * [.getGroupMembers(group\_id)](doc.md#module\_groupManage.getGroupMembers) ⇒ [`Array.<GroupMember>`](doc.md#module\_types..GroupMember)
   * [.asyncGetGroupListDetail(gids)](doc.md#module\_groupManage.asyncGetGroupListDetail) ⇒ `Promise.<Array.<module:types~BriefGroupInfoAndSettings>>`
@@ -107,7 +107,7 @@
 | --------- | -------- | ----------- |
 | group\_id | `number` | 群组ID        |
 
-### groupManage.getAllGroupDetail() ⇒ `Object.<number, module:types~GroupInfoAndSettings>`
+### groupManage.getAllGroupDetail() ⇒ `Object.<number, module:types~GroupInfoAndSettings>`  {#test-link}
 
 获取缓存的所有群组详情
 
