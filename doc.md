@@ -17,7 +17,7 @@
 群管理
 
 * [groupManage](broken-reference)
-  * [.asyncGetGroupInfo(group\_id, froce)](broken-reference) ⇒ [`Promise.<GroupInfoAndSettings>`](broken-reference)
+  * [.asyncGetGroupInfo(group\_id, froce)](doc.md#groupmanage.asyncgetgroupinfo-group\_id-froce-promise.less-than-groupinfoandsettings-greater-than) ⇒ [`Promise.<GroupInfoAndSettings>`](broken-reference)
   * [.asyncGetJoinedGroups(froce)](broken-reference) ⇒ `Promise.<Array.<number>>`
   * [.openGroup(group\_id)](broken-reference)
   * [.getAllGroupDetail()](doc.md#groupmanage.getallgroupdetail-object.less-than-number-module-types-groupinfoandsettings-greater-than) ⇒ `Object.<number, module:types~GroupInfoAndSettings>`
