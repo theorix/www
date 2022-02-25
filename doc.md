@@ -30,7 +30,7 @@
   * [.readGroupMessage(group\_id, mid)](broken-reference)
   * [.recallMessage(uid, mid)](broken-reference)
   * [.getUnreadCount(gid)](broken-reference) ⇒ `number`
-  * [.asyncGetAdminList(params)](broken-reference) ⇒ `Promise.<Array.<module:types~GroupMember>>`
+  * [.asyncGetAdminList(params)](doc.md#groupmanage.asyncgetadminlist-params-promise.less-than-array.less-than-module-types-groupmember-grea) ⇒ `Promise.<Array.<module:types~GroupMember>>`
   * [.asyncAdminAdd(params)](broken-reference) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
   * [.asyncAdminRemove(params)](broken-reference) ⇒ `Promise.<Array.<module:types~GroupUserRelationResponse>>`
   * [.asyncGetAnouncementById(params)](broken-reference) ⇒ [`Promise.<GroupAnnouncement>`](broken-reference)
