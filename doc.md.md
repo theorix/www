@@ -17,158 +17,158 @@
 <dd></dd>
 </dl>
 
-# groupManage {#module_groupManage}
+# groupManage {#module_groupmanage}
 群管理
 
 
-* [groupManage](#module_groupManage)
-    * [.asyncGetGroupInfo(group_id, froce)](#module_groupManage.asyncGetGroupInfo) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings)
-    * [.asyncGetJoinedGroups(froce)](#module_groupManage.asyncGetJoinedGroups) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
-    * [.openGroup(group_id)](#module_groupManage.openGroup)
-    * [.getAllGroupDetail()](#module_groupManage.getAllGroupDetail) ⇒ <code>Object.&lt;number, module:types~GroupInfoAndSettings&gt;</code>
-    * [.asyncGetGroupMembers(group_id)](#module_groupManage.asyncGetGroupMembers) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
-    * [.getGroupMembers(group_id)](#module_groupManage.getGroupMembers) ⇒ [<code>Array.&lt;GroupMember&gt;</code>](#module_types..GroupMember)
-    * [.asyncGetGroupListDetail(gids)](#module_groupManage.asyncGetGroupListDetail) ⇒ <code>Promise.&lt;Array.&lt;module:types~BriefGroupInfoAndSettings&gt;&gt;</code>
-    * [.getGruopMessage(gid)](#module_groupManage.getGruopMessage) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..Meta)
-    * [.asyncGetInfo(params)](#module_groupManage.asyncGetInfo) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings)
-    * [.asyncGetMemberList(param)](#module_groupManage.asyncGetMemberList) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
-    * [.readGroupMessage(group_id, mid)](#module_groupManage.readGroupMessage)
-    * [.recallMessage(uid, mid)](#module_groupManage.recallMessage)
-    * [.getUnreadCount(gid)](#module_groupManage.getUnreadCount) ⇒ <code>number</code>
-    * [.asyncGetAdminList(params)](#module_groupManage.asyncGetAdminList) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
-    * [.asyncAdminAdd(params)](#module_groupManage.asyncAdminAdd) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncAdminRemove(params)](#module_groupManage.asyncAdminRemove) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncGetAnouncementById(params)](#module_groupManage.asyncGetAnouncementById) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..GroupAnnouncement)
-    * [.asyncAnouncementDelete(params)](#module_groupManage.asyncAnouncementDelete) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncAnnouncementEdit(params)](#module_groupManage.asyncAnnouncementEdit) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..GroupAnnouncement)
-    * [.asyncGetAnnouncementList(params)](#module_groupManage.asyncGetAnnouncementList) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupAnnouncement&gt;&gt;</code>
-    * [.asyncCreate(params)](#module_groupManage.asyncCreate) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings)
-    * [.asyncDestroy(params)](#module_groupManage.asyncDestroy) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateAvatar(params)](#module_groupManage.asyncUpdateAvatar) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateDescription(params)](#module_groupManage.asyncUpdateDescription) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateExt(params)](#module_groupManage.asyncUpdateExt) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateName(params)](#module_groupManage.asyncUpdateName) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncGroupMsgMutemode(params)](#module_groupManage.asyncGroupMsgMutemode) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncGroupBannedList(params)](#module_groupManage.asyncGroupBannedList) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMemberBanned&gt;&gt;</code>
-    * [.asyncGroupBab(params)](#module_groupManage.asyncGroupBab) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncGroupUnban(params)](#module_groupManage.asyncGroupUnban) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncGetSettings(group_id)](#module_groupManage.asyncGetSettings) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings)
-    * [.asyncUpdateAllowMemberInvitation(params)](#module_groupManage.asyncUpdateAllowMemberInvitation) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateAllowMemberModify(params)](#module_groupManage.asyncUpdateAllowMemberModify) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateEnableReadack(params)](#module_groupManage.asyncUpdateEnableReadack) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateHistoryVisible(params)](#module_groupManage.asyncUpdateHistoryVisible) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateRequireadminapproval(params)](#module_groupManage.asyncUpdateRequireadminapproval) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncBanAll(params)](#module_groupManage.asyncBanAll) ⇒ [<code>Promise.&lt;GroupBanAllResponse&gt;</code>](#module_types..GroupBanAllResponse)
-    * [.asyncUnBanAll(params)](#module_groupManage.asyncUnBanAll) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncOwnerTransfer(params)](#module_groupManage.asyncOwnerTransfer) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse)
-    * [.asyncGetUserJoined(params)](#module_groupManage.asyncGetUserJoined) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
-    * [.asyncApply(params)](#module_groupManage.asyncApply) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse)
-    * [.asyncApplyHandle(params)](#module_groupManage.asyncApplyHandle) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse)
-    * [.asyncGroupBockedlist(params)](#module_groupManage.asyncGroupBockedlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupBlockedListItem&gt;&gt;</code>
-    * [.asyncGroupBlock(params)](#module_groupManage.asyncGroupBlock) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncGroupUnblock(params)](#module_groupManage.asyncGroupUnblock) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncKick(params)](#module_groupManage.asyncKick) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncGetInvitationList()](#module_groupManage.asyncGetInvitationList) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupInvitation&gt;&gt;</code>
-    * [.asyncInvite(params)](#module_groupManage.asyncInvite) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
-    * [.asyncInviteHandle(params)](#module_groupManage.asyncInviteHandle) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncGetMemberDisplayName(params)](#module_groupManage.asyncGetMemberDisplayName) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
-    * [.asyncLeave(params)](#module_groupManage.asyncLeave) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateDisplayName(params)](#module_groupManage.asyncUpdateDisplayName) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asncGetApplicationList(params)](#module_groupManage.asncGetApplicationList) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupApplication&gt;&gt;</code>
-    * [.asyncGetFileList(params)](#module_groupManage.asyncGetFileList) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code>
-    * [.asyncFileDelete(params)](#module_groupManage.asyncFileDelete) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFileResponse&gt;&gt;</code>
-    * [.asyncFileUpload(params)](#module_groupManage.asyncFileUpload) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code>
+* [groupManage](#module_groupmanage)
+    * [.asyncGetGroupInfo(group_id, froce)](#module_groupmanage.asyncgetgroupinfo) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings)
+    * [.asyncGetJoinedGroups(froce)](#module_groupmanage.asyncgetjoinedgroups) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
+    * [.openGroup(group_id)](#module_groupmanage.opengroup)
+    * [.getAllGroupDetail()](#module_groupmanage.getallgroupdetail) ⇒ <code>Object.&lt;number, module:types~GroupInfoAndSettings&gt;</code>
+    * [.asyncGetGroupMembers(group_id)](#module_groupmanage.asyncgetgroupmembers) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
+    * [.getGroupMembers(group_id)](#module_groupmanage.getgroupmembers) ⇒ [<code>Array.&lt;GroupMember&gt;</code>](#module_types..groupmember)
+    * [.asyncGetGroupListDetail(gids)](#module_groupmanage.asyncgetgrouplistdetail) ⇒ <code>Promise.&lt;Array.&lt;module:types~BriefGroupInfoAndSettings&gt;&gt;</code>
+    * [.getGruopMessage(gid)](#module_groupmanage.getgruopmessage) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..meta)
+    * [.asyncGetInfo(params)](#module_groupmanage.asyncgetinfo) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings)
+    * [.asyncGetMemberList(param)](#module_groupmanage.asyncgetmemberlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
+    * [.readGroupMessage(group_id, mid)](#module_groupmanage.readgroupmessage)
+    * [.recallMessage(uid, mid)](#module_groupmanage.recallmessage)
+    * [.getUnreadCount(gid)](#module_groupmanage.getunreadcount) ⇒ <code>number</code>
+    * [.asyncGetAdminList(params)](#module_groupmanage.asyncgetadminlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
+    * [.asyncAdminAdd(params)](#module_groupmanage.asyncadminadd) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncAdminRemove(params)](#module_groupmanage.asyncadminremove) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncGetAnouncementById(params)](#module_groupmanage.asyncgetanouncementbyid) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..groupannouncement)
+    * [.asyncAnouncementDelete(params)](#module_groupmanage.asyncanouncementdelete) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncAnnouncementEdit(params)](#module_groupmanage.asyncannouncementedit) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..groupannouncement)
+    * [.asyncGetAnnouncementList(params)](#module_groupmanage.asyncgetannouncementlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupAnnouncement&gt;&gt;</code>
+    * [.asyncCreate(params)](#module_groupmanage.asynccreate) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings)
+    * [.asyncDestroy(params)](#module_groupmanage.asyncdestroy) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateAvatar(params)](#module_groupmanage.asyncupdateavatar) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateDescription(params)](#module_groupmanage.asyncupdatedescription) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateExt(params)](#module_groupmanage.asyncupdateext) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateName(params)](#module_groupmanage.asyncupdatename) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncGroupMsgMutemode(params)](#module_groupmanage.asyncgroupmsgmutemode) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncGroupBannedList(params)](#module_groupmanage.asyncgroupbannedlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMemberBanned&gt;&gt;</code>
+    * [.asyncGroupBab(params)](#module_groupmanage.asyncgroupbab) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncGroupUnban(params)](#module_groupmanage.asyncgroupunban) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncGetSettings(group_id)](#module_groupmanage.asyncgetsettings) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings)
+    * [.asyncUpdateAllowMemberInvitation(params)](#module_groupmanage.asyncupdateallowmemberinvitation) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateAllowMemberModify(params)](#module_groupmanage.asyncupdateallowmembermodify) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateEnableReadack(params)](#module_groupmanage.asyncupdateenablereadack) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateHistoryVisible(params)](#module_groupmanage.asyncupdatehistoryvisible) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateRequireadminapproval(params)](#module_groupmanage.asyncupdaterequireadminapproval) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncBanAll(params)](#module_groupmanage.asyncbanall) ⇒ [<code>Promise.&lt;GroupBanAllResponse&gt;</code>](#module_types..groupbanallresponse)
+    * [.asyncUnBanAll(params)](#module_groupmanage.asyncunbanall) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncOwnerTransfer(params)](#module_groupmanage.asyncownertransfer) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse)
+    * [.asyncGetUserJoined(params)](#module_groupmanage.asyncgetuserjoined) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
+    * [.asyncApply(params)](#module_groupmanage.asyncapply) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse)
+    * [.asyncApplyHandle(params)](#module_groupmanage.asyncapplyhandle) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse)
+    * [.asyncGroupBockedlist(params)](#module_groupmanage.asyncgroupbockedlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupBlockedListItem&gt;&gt;</code>
+    * [.asyncGroupBlock(params)](#module_groupmanage.asyncgroupblock) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncGroupUnblock(params)](#module_groupmanage.asyncgroupunblock) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncKick(params)](#module_groupmanage.asynckick) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncGetInvitationList()](#module_groupmanage.asyncgetinvitationlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupInvitation&gt;&gt;</code>
+    * [.asyncInvite(params)](#module_groupmanage.asyncinvite) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code>
+    * [.asyncInviteHandle(params)](#module_groupmanage.asyncinvitehandle) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncGetMemberDisplayName(params)](#module_groupmanage.asyncgetmemberdisplayname) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code>
+    * [.asyncLeave(params)](#module_groupmanage.asyncleave) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateDisplayName(params)](#module_groupmanage.asyncupdatedisplayname) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asncGetApplicationList(params)](#module_groupmanage.asncgetapplicationlist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupApplication&gt;&gt;</code>
+    * [.asyncGetFileList(params)](#module_groupmanage.asyncgetfilelist) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code>
+    * [.asyncFileDelete(params)](#module_groupmanage.asyncfiledelete) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFileResponse&gt;&gt;</code>
+    * [.asyncFileUpload(params)](#module_groupmanage.asyncfileupload) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code>
 
-## groupManage.asyncGetGroupInfo(group_id, froce) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) {#module_groupManage.asyncGetGroupInfo}
+## groupManage.asyncGetGroupInfo(group_id, froce) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) {#module_groupmanage.asyncgetgroupinfo}
 获取群信息
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) - 群信息  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) - 群信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | group_id | <code>number</code> | 群ID |
 | froce | <code>boolean</code> | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-## groupManage.asyncGetJoinedGroups(froce) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_groupManage.asyncGetJoinedGroups}
+## groupManage.asyncGetJoinedGroups(froce) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_groupmanage.asyncgetjoinedgroups}
 获取加入的群组
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> - 群组ID列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | froce | <code>boolean</code> | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-## groupManage.openGroup(group_id) {#module_groupManage.openGroup}
+## groupManage.openGroup(group_id) {#module_groupmanage.opengroup}
 打开群组， 此方法会准备群组聊天界面的一些必备信息。
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | group_id | <code>number</code> | 群组ID |
 
-## groupManage.getAllGroupDetail() ⇒ <code>Object.&lt;number, module:types~GroupInfoAndSettings&gt;</code> {#module_groupManage.getAllGroupDetail}
+## groupManage.getAllGroupDetail() ⇒ <code>Object.&lt;number, module:types~GroupInfoAndSettings&gt;</code> {#module_groupmanage.getallgroupdetail}
 获取缓存的所有群组详情
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Object.&lt;number, module:types~GroupInfoAndSettings&gt;</code> - 群组详情  
-## groupManage.asyncGetGroupMembers(group_id) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupManage.asyncGetGroupMembers}
+## groupManage.asyncGetGroupMembers(group_id) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupmanage.asyncgetgroupmembers}
 获取群组成员（异步）
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> - 群成员列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | group_id | <code>number</code> | 群组ID |
 
-## groupManage.getGroupMembers(group_id) ⇒ [<code>Array.&lt;GroupMember&gt;</code>](#module_types..GroupMember) {#module_groupManage.getGroupMembers}
+## groupManage.getGroupMembers(group_id) ⇒ [<code>Array.&lt;GroupMember&gt;</code>](#module_types..groupmember) {#module_groupmanage.getgroupmembers}
 获取群组成员（同步）
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Array.&lt;GroupMember&gt;</code>](#module_types..GroupMember) - 群成员列表  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Array.&lt;GroupMember&gt;</code>](#module_types..groupmember) - 群成员列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncGetGroupListDetail(gids) ⇒ <code>Promise.&lt;Array.&lt;module:types~BriefGroupInfoAndSettings&gt;&gt;</code> {#module_groupManage.asyncGetGroupListDetail}
+## groupManage.asyncGetGroupListDetail(gids) ⇒ <code>Promise.&lt;Array.&lt;module:types~BriefGroupInfoAndSettings&gt;&gt;</code> {#module_groupmanage.asyncgetgrouplistdetail}
 按id获取群组详情
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~BriefGroupInfoAndSettings&gt;&gt;</code> - 群组详情列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | gids | <code>Array.&lt;number&gt;</code> | 群组ID列表 |
 
-## groupManage.getGruopMessage(gid) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..Meta) {#module_groupManage.getGruopMessage}
+## groupManage.getGruopMessage(gid) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..meta) {#module_groupmanage.getgruopmessage}
 获取群消息
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Array.&lt;Meta&gt;</code>](#module_types..Meta) - 群消息列表  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Array.&lt;Meta&gt;</code>](#module_types..meta) - 群消息列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | gid | <code>number</code> | 群ID |
 
-## groupManage.asyncGetInfo(params) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) {#module_groupManage.asyncGetInfo}
+## groupManage.asyncGetInfo(params) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) {#module_groupmanage.asyncgetinfo}
 获取群组详情
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) - 群组详情  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) - 群组详情  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncGetMemberList(param) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupManage.asyncGetMemberList}
+## groupManage.asyncGetMemberList(param) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupmanage.asyncgetmemberlist}
 获取群成员列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> - 群成员列表  
 
 | Param | Type | Description |
@@ -176,40 +176,40 @@
 | param | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.readGroupMessage(group_id, mid) {#module_groupManage.readGroupMessage}
+## groupManage.readGroupMessage(group_id, mid) {#module_groupmanage.readgroupmessage}
 将群消息设置已读
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | group_id | <code>number</code> | 群组ID |
 | mid | <code>number</code> | 消息ID |
 
-## groupManage.recallMessage(uid, mid) {#module_groupManage.recallMessage}
+## groupManage.recallMessage(uid, mid) {#module_groupmanage.recallmessage}
 撤回消息
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | uid | <code>number</code> | 群组ID |
 | mid | <code>number</code> | 消息ID |
 
-## groupManage.getUnreadCount(gid) ⇒ <code>number</code> {#module_groupManage.getUnreadCount}
+## groupManage.getUnreadCount(gid) ⇒ <code>number</code> {#module_groupmanage.getunreadcount}
 获取群未读消息数
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>number</code> - 未读消息数  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | gid | <code>number</code> | 群组ID |
 
-## groupManage.asyncGetAdminList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupManage.asyncGetAdminList}
+## groupManage.asyncGetAdminList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupmanage.asyncgetadminlist}
 获取群管理员列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> - 群管理员列表  
 
 | Param | Type | Description |
@@ -217,10 +217,10 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncAdminAdd(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncAdminAdd}
+## groupManage.asyncAdminAdd(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asyncadminadd}
 群添加管理员
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 结果列表  
 
 | Param | Type | Description |
@@ -229,10 +229,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncAdminRemove(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncAdminRemove}
+## groupManage.asyncAdminRemove(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asyncadminremove}
 移除管理员
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 结果列表  
 
 | Param | Type | Description |
@@ -241,11 +241,11 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncGetAnouncementById(params) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..GroupAnnouncement) {#module_groupManage.asyncGetAnouncementById}
+## groupManage.asyncGetAnouncementById(params) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..groupannouncement) {#module_groupmanage.asyncgetanouncementbyid}
 获取群公告详情
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..GroupAnnouncement) - 群公告详情  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..groupannouncement) - 群公告详情  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -253,10 +253,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.announcement_id | <code>Array.&lt;number&gt;</code> | 公告ID |
 
-## groupManage.asyncAnouncementDelete(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncAnouncementDelete}
+## groupManage.asyncAnouncementDelete(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncanouncementdelete}
 删除群公告
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -265,11 +265,11 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.announcement_id | <code>Array.&lt;number&gt;</code> | 公告ID |
 
-## groupManage.asyncAnnouncementEdit(params) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..GroupAnnouncement) {#module_groupManage.asyncAnnouncementEdit}
+## groupManage.asyncAnnouncementEdit(params) ⇒ [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..groupannouncement) {#module_groupmanage.asyncannouncementedit}
 编辑群公告
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..GroupAnnouncement) - 群公告详情  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupAnnouncement&gt;</code>](#module_types..groupannouncement) - 群公告详情  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -278,10 +278,10 @@
 | params.title | <code>string</code> | 公告标题 |
 | params.content | <code>string</code> | 公告内容 |
 
-## groupManage.asyncGetAnnouncementList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupAnnouncement&gt;&gt;</code> {#module_groupManage.asyncGetAnnouncementList}
+## groupManage.asyncGetAnnouncementList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupAnnouncement&gt;&gt;</code> {#module_groupmanage.asyncgetannouncementlist}
 群公告列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupAnnouncement&gt;&gt;</code> - 群公告详情列表  
 
 | Param | Type | Description |
@@ -289,20 +289,20 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncCreate(params) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) {#module_groupManage.asyncCreate}
+## groupManage.asyncCreate(params) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) {#module_groupmanage.asynccreate}
 创建群组
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) - 群详情  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) - 群详情  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| params | [<code>GroupInfoRequest</code>](#module_types..GroupInfoRequest) | 请求参数 |
+| params | [<code>GroupInfoRequest</code>](#module_types..groupinforequest) | 请求参数 |
 
-## groupManage.asyncDestroy(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncDestroy}
+## groupManage.asyncDestroy(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncdestroy}
 解散群组
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -310,10 +310,10 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncUpdateAvatar(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateAvatar}
+## groupManage.asyncUpdateAvatar(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdateavatar}
 更新群头像
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -322,10 +322,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>string</code> | 头像地址 |
 
-## groupManage.asyncUpdateDescription(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateDescription}
+## groupManage.asyncUpdateDescription(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdatedescription}
 更新群描述
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -334,10 +334,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>string</code> | 群组描述 |
 
-## groupManage.asyncUpdateExt(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateExt}
+## groupManage.asyncUpdateExt(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdateext}
 更新群扩展信息
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -346,10 +346,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>string</code> | 扩展信息 |
 
-## groupManage.asyncUpdateName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateName}
+## groupManage.asyncUpdateName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdatename}
 更新群名称
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -358,10 +358,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>string</code> | 群名称 |
 
-## groupManage.asyncGroupMsgMutemode(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncGroupMsgMutemode}
+## groupManage.asyncGroupMsgMutemode(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncgroupmsgmutemode}
 设置群消息免打扰情况
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -370,10 +370,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.msg_mute_mode | <code>number</code> | 群消息屏蔽模式: 0 - 表示不屏蔽, 1 - 表示屏蔽本地消息通知, 2 - 表示屏蔽消息，不接收消息 |
 
-## groupManage.asyncGroupBannedList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMemberBanned&gt;&gt;</code> {#module_groupManage.asyncGroupBannedList}
+## groupManage.asyncGroupBannedList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMemberBanned&gt;&gt;</code> {#module_groupmanage.asyncgroupbannedlist}
 获取群禁言列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupMemberBanned&gt;&gt;</code> - 禁言成员列表  
 
 | Param | Type | Description |
@@ -381,20 +381,20 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncGroupBab(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncGroupBab}
+## groupManage.asyncGroupBab(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asyncgroupbab}
 禁言群成员
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 请求结果列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| params | [<code>GroupBannedMemberRequest</code>](#module_types..GroupBannedMemberRequest) | 请求参数 |
+| params | [<code>GroupBannedMemberRequest</code>](#module_types..groupbannedmemberrequest) | 请求参数 |
 
-## groupManage.asyncGroupUnban(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncGroupUnban}
+## groupManage.asyncGroupUnban(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asyncgroupunban}
 解除成员禁言
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 请求结果列表  
 
 | Param | Type | Description |
@@ -403,20 +403,20 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncGetSettings(group_id) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) {#module_groupManage.asyncGetSettings}
+## groupManage.asyncGetSettings(group_id) ⇒ [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) {#module_groupmanage.asyncgetsettings}
 获取群设置
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..GroupInfoAndSettings) - 群设置  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupInfoAndSettings&gt;</code>](#module_types..groupinfoandsettings) - 群设置  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | group_id | <code>number</code> | 群ID |
 
-## groupManage.asyncUpdateAllowMemberInvitation(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateAllowMemberInvitation}
+## groupManage.asyncUpdateAllowMemberInvitation(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdateallowmemberinvitation}
 设置群成员是否可以邀请
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -425,10 +425,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>boolean</code> | 群成员邀请设置: false - 不允许邀请, true - 允许邀请(默认) |
 
-## groupManage.asyncUpdateAllowMemberModify(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateAllowMemberModify}
+## groupManage.asyncUpdateAllowMemberModify(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdateallowmembermodify}
 设置群成员是否可以修改群信息
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -437,10 +437,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>boolean</code> | 群成员修改群信息设置:  false - 群成员不能修改群信息(默认), true - 群成员可以修改群信息 |
 
-## groupManage.asyncUpdateEnableReadack(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateEnableReadack}
+## groupManage.asyncUpdateEnableReadack(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdateenablereadack}
 设置群是否开启已读模式
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -449,10 +449,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>boolean</code> | 是否开启群消息已读功能:  false - 不开启, true - 开启 |
 
-## groupManage.asyncUpdateHistoryVisible(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateHistoryVisible}
+## groupManage.asyncUpdateHistoryVisible(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdatehistoryvisible}
 设置群历史是否可见
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -461,10 +461,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>boolean</code> | 设置群历史是否可见:  false - 不可见, true - 可见 |
 
-## groupManage.asyncUpdateRequireadminapproval(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateRequireadminapproval}
+## groupManage.asyncUpdateRequireadminapproval(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdaterequireadminapproval}
 设置入群是否需要申请
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -473,11 +473,11 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.apply_approval | <code>boolean</code> | 入群申请审批设置, 0:同意所有申请 1:需要管理员确认 2:拒绝所有申请 |
 
-## groupManage.asyncBanAll(params) ⇒ [<code>Promise.&lt;GroupBanAllResponse&gt;</code>](#module_types..GroupBanAllResponse) {#module_groupManage.asyncBanAll}
+## groupManage.asyncBanAll(params) ⇒ [<code>Promise.&lt;GroupBanAllResponse&gt;</code>](#module_types..groupbanallresponse) {#module_groupmanage.asyncbanall}
 全员禁言，只允许管理员发消息
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupBanAllResponse&gt;</code>](#module_types..GroupBanAllResponse) - 结果  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupBanAllResponse&gt;</code>](#module_types..groupbanallresponse) - 结果  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -485,10 +485,10 @@
 | params.duration | <code>number</code> | 禁言时长，单位为分钟,int64 |
 | params.group_id | <code>number</code> | 群id,int64 |
 
-## groupManage.asyncUnBanAll(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUnBanAll}
+## groupManage.asyncUnBanAll(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncunbanall}
 取消全员禁言
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -496,11 +496,11 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群id,int64 |
 
-## groupManage.asyncOwnerTransfer(params) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse) {#module_groupManage.asyncOwnerTransfer}
+## groupManage.asyncOwnerTransfer(params) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse) {#module_groupmanage.asyncownertransfer}
 更换群主
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse) - 结果  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse) - 结果  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -508,21 +508,21 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.new_owner | <code>number</code> | 新群主的用户ID |
 
-## groupManage.asyncGetUserJoined(params) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_groupManage.asyncGetUserJoined}
+## groupManage.asyncGetUserJoined(params) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_groupmanage.asyncgetuserjoined}
 获取用户的群组列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> - 群ID的列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | 参数, 空对象 |
 
-## groupManage.asyncApply(params) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse) {#module_groupManage.asyncApply}
+## groupManage.asyncApply(params) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse) {#module_groupmanage.asyncapply}
 申请加入群
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse) - 结果  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse) - 结果  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -530,11 +530,11 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.reason | <code>string</code> | 申请入群原因 |
 
-## groupManage.asyncApplyHandle(params) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse) {#module_groupManage.asyncApplyHandle}
+## groupManage.asyncApplyHandle(params) ⇒ [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse) {#module_groupmanage.asyncapplyhandle}
 处理用户的入群申请
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
-**Returns**: [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..GroupUserRelationResponse) - 结果  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
+**Returns**: [<code>Promise.&lt;GroupUserRelationResponse&gt;</code>](#module_types..groupuserrelationresponse) - 结果  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -543,10 +543,10 @@
 | params.user_id | <code>number</code> | 用户ID |
 | params.approval | <code>boolean</code> | 审批结果：true为同意，false为拒绝 |
 
-## groupManage.asyncGroupBockedlist(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupBlockedListItem&gt;&gt;</code> {#module_groupManage.asyncGroupBockedlist}
+## groupManage.asyncGroupBockedlist(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupBlockedListItem&gt;&gt;</code> {#module_groupmanage.asyncgroupbockedlist}
 获取群黑名单
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupBlockedListItem&gt;&gt;</code> - 群黑名单列表  
 
 | Param | Type | Description |
@@ -554,10 +554,10 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncGroupBlock(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncGroupBlock}
+## groupManage.asyncGroupBlock(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asyncgroupblock}
 将成员加入黑名单
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 结果列表  
 
 | Param | Type | Description |
@@ -566,10 +566,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncGroupUnblock(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncGroupUnblock}
+## groupManage.asyncGroupUnblock(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asyncgroupunblock}
 解除黑名单
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 结果列表  
 
 | Param | Type | Description |
@@ -578,10 +578,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncKick(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncKick}
+## groupManage.asyncKick(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asynckick}
 踢出群组
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 结果列表  
 
 | Param | Type | Description |
@@ -590,15 +590,15 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncGetInvitationList() ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupInvitation&gt;&gt;</code> {#module_groupManage.asyncGetInvitationList}
+## groupManage.asyncGetInvitationList() ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupInvitation&gt;&gt;</code> {#module_groupmanage.asyncgetinvitationlist}
 获取群邀请列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupInvitation&gt;&gt;</code> - 群邀请列表  
-## groupManage.asyncInvite(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupManage.asyncInvite}
+## groupManage.asyncInvite(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> {#module_groupmanage.asyncinvite}
 邀请成员加入群
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupUserRelationResponse&gt;&gt;</code> - 结果列表  
 
 | Param | Type | Description |
@@ -607,10 +607,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncInviteHandle(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncInviteHandle}
+## groupManage.asyncInviteHandle(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncinvitehandle}
 处理群邀请
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -620,10 +620,10 @@
 | params.user_id | <code>number</code> | 用户ID |
 | params.approval | <code>boolean</code> | 审批结果：true为同意，false为拒绝 |
 
-## groupManage.asyncGetMemberDisplayName(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupManage.asyncGetMemberDisplayName}
+## groupManage.asyncGetMemberDisplayName(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> {#module_groupmanage.asyncgetmemberdisplayname}
 批量获取群成员的群名片
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupMember&gt;&gt;</code> - 群成员列表  
 
 | Param | Type | Description |
@@ -632,10 +632,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.user_list | <code>Array.&lt;number&gt;</code> | 群成员列表 |
 
-## groupManage.asyncLeave(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncLeave}
+## groupManage.asyncLeave(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncleave}
 退出群
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -643,10 +643,10 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncUpdateDisplayName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupManage.asyncUpdateDisplayName}
+## groupManage.asyncUpdateDisplayName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_groupmanage.asyncupdatedisplayname}
 修改群名片
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -655,10 +655,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.value | <code>string</code> | 新名片 |
 
-## groupManage.asncGetApplicationList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupApplication&gt;&gt;</code> {#module_groupManage.asncGetApplicationList}
+## groupManage.asncGetApplicationList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupApplication&gt;&gt;</code> {#module_groupmanage.asncgetapplicationlist}
 获取群申请列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupApplication&gt;&gt;</code> - 群申请列表  
 
 | Param | Type | Description |
@@ -666,10 +666,10 @@
 | params | <code>object</code> | 参数 |
 | params.group_list | <code>Array.&lt;number&gt;</code> | 群列表 |
 
-## groupManage.asyncGetFileList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code> {#module_groupManage.asyncGetFileList}
+## groupManage.asyncGetFileList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code> {#module_groupmanage.asyncgetfilelist}
 获取群文件列表
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code> - 群文件列表  
 
 | Param | Type | Description |
@@ -677,10 +677,10 @@
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## groupManage.asyncFileDelete(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFileResponse&gt;&gt;</code> {#module_groupManage.asyncFileDelete}
+## groupManage.asyncFileDelete(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFileResponse&gt;&gt;</code> {#module_groupmanage.asyncfiledelete}
 删除群文件
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupSharedFileResponse&gt;&gt;</code> - 结果列表  
 
 | Param | Type | Description |
@@ -689,10 +689,10 @@
 | params.group_id | <code>number</code> | 群组ID |
 | params.file_list | <code>Array.&lt;number&gt;</code> | 文件ID列表 |
 
-## groupManage.asyncFileUpload(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code> {#module_groupManage.asyncFileUpload}
+## groupManage.asyncFileUpload(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code> {#module_groupmanage.asyncfileupload}
 上传群文件
 
-**Kind**: static method of [<code>groupManage</code>](#module_groupManage)  
+**Kind**: static method of [<code>groupManage</code>](#module_groupmanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~GroupSharedFile&gt;&gt;</code> - 群文件列表  
 
 | Param | Type | Description |
@@ -704,62 +704,62 @@
 | params.type | <code>string</code> | 文件类型 |
 | params.url | <code>string</code> | 文件url |
 
-# rosterManage {#module_rosterManage}
+# rosterManage {#module_rostermanage}
 好友管理
 
 
-* [rosterManage](#module_rosterManage)
-    * [.asyncGetRosterIdList(force)](#module_rosterManage.asyncGetRosterIdList) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
-    * [.asyncGetRosterInfo(roster_id, force)](#module_rosterManage.asyncGetRosterInfo) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem)
-    * [.asyncRegester(opt)](#module_rosterManage.asyncRegester) ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..UserSettings)
-    * [.asyncDeleteRoster(param)](#module_rosterManage.asyncDeleteRoster) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asnycGetRosterListDetailByIds(roster_ids)](#module_rosterManage.asnycGetRosterListDetailByIds) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterItem&gt;&gt;</code>
-    * [.getAllRosterDetail()](#module_rosterManage.getAllRosterDetail) ⇒ [<code>Array.&lt;RosterItem&gt;</code>](#module_types..RosterItem)
-    * [.asyncGetUserProfile(force)](#module_rosterManage.asyncGetUserProfile) ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..UserProfile)
-    * [.getRosterMessageByRid(uid)](#module_rosterManage.getRosterMessageByRid) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..Meta)
-    * [.readRosterMessage(roster_id, mid)](#module_rosterManage.readRosterMessage)
-    * [.recallMessage(uid, mid)](#module_rosterManage.recallMessage)
-    * [.unreadMessage(uid, mid)](#module_rosterManage.unreadMessage)
-    * [.deleteMessage(uid, mid)](#module_rosterManage.deleteMessage)
-    * [.getRosterInfo(rid)](#module_rosterManage.getRosterInfo) ⇒ [<code>RosterItem</code>](#module_types..RosterItem)
-    * [.getUnreadCount(uid)](#module_rosterManage.getUnreadCount) ⇒ <code>number</code>
-    * [.asyncGetApplyList(params)](#module_rosterManage.asyncGetApplyList) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterApplication&gt;&gt;</code>
-    * [.asyncGetBlockedlist(params)](#module_rosterManage.asyncGetBlockedlist) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
-    * [.asyncBlockeAdd(params)](#module_rosterManage.asyncBlockeAdd) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncBlockeRemove(params)](#module_rosterManage.asyncBlockeRemove) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncApply(params)](#module_rosterManage.asyncApply) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncAccept(params)](#module_rosterManage.asyncAccept) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncDecline(params)](#module_rosterManage.asyncDecline) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateRosterExt(params)](#module_rosterManage.asyncUpdateRosterExt) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncSearchRosterByName(params)](#module_rosterManage.asyncSearchRosterByName) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem)
-    * [.asyncSearchRosterById(params)](#module_rosterManage.asyncSearchRosterById) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem)
+* [rosterManage](#module_rostermanage)
+    * [.asyncGetRosterIdList(force)](#module_rostermanage.asyncgetrosteridlist) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
+    * [.asyncGetRosterInfo(roster_id, force)](#module_rostermanage.asyncgetrosterinfo) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem)
+    * [.asyncRegester(opt)](#module_rostermanage.asyncregester) ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings)
+    * [.asyncDeleteRoster(param)](#module_rostermanage.asyncdeleteroster) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asnycGetRosterListDetailByIds(roster_ids)](#module_rostermanage.asnycgetrosterlistdetailbyids) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterItem&gt;&gt;</code>
+    * [.getAllRosterDetail()](#module_rostermanage.getallrosterdetail) ⇒ [<code>Array.&lt;RosterItem&gt;</code>](#module_types..rosteritem)
+    * [.asyncGetUserProfile(force)](#module_rostermanage.asyncgetuserprofile) ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile)
+    * [.getRosterMessageByRid(uid)](#module_rostermanage.getrostermessagebyrid) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..meta)
+    * [.readRosterMessage(roster_id, mid)](#module_rostermanage.readrostermessage)
+    * [.recallMessage(uid, mid)](#module_rostermanage.recallmessage)
+    * [.unreadMessage(uid, mid)](#module_rostermanage.unreadmessage)
+    * [.deleteMessage(uid, mid)](#module_rostermanage.deletemessage)
+    * [.getRosterInfo(rid)](#module_rostermanage.getrosterinfo) ⇒ [<code>RosterItem</code>](#module_types..rosteritem)
+    * [.getUnreadCount(uid)](#module_rostermanage.getunreadcount) ⇒ <code>number</code>
+    * [.asyncGetApplyList(params)](#module_rostermanage.asyncgetapplylist) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterApplication&gt;&gt;</code>
+    * [.asyncGetBlockedlist(params)](#module_rostermanage.asyncgetblockedlist) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code>
+    * [.asyncBlockeAdd(params)](#module_rostermanage.asyncblockeadd) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncBlockeRemove(params)](#module_rostermanage.asyncblockeremove) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncApply(params)](#module_rostermanage.asyncapply) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncAccept(params)](#module_rostermanage.asyncaccept) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncDecline(params)](#module_rostermanage.asyncdecline) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateRosterExt(params)](#module_rostermanage.asyncupdaterosterext) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncSearchRosterByName(params)](#module_rostermanage.asyncsearchrosterbyname) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem)
+    * [.asyncSearchRosterById(params)](#module_rostermanage.asyncsearchrosterbyid) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem)
 
-## rosterManage.asyncGetRosterIdList(force) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_rosterManage.asyncGetRosterIdList}
+## rosterManage.asyncGetRosterIdList(force) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_rostermanage.asyncgetrosteridlist}
 获取好友id列表
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> - 用户ID列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | force | <code>boolean</code> | 是否强制从服务器拉取：true - 从服务器获取， false - 从本地存储获取 |
 
-## rosterManage.asyncGetRosterInfo(roster_id, force) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem) {#module_rosterManage.asyncGetRosterInfo}
+## rosterManage.asyncGetRosterInfo(roster_id, force) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) {#module_rostermanage.asyncgetrosterinfo}
 获取好友信息
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem) - 好友信息  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) - 好友信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | roster_id | <code>number</code> | 好友ID |
 | force | <code>boolean</code> | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-## rosterManage.asyncRegester(opt) ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..UserSettings) {#module_rosterManage.asyncRegester}
+## rosterManage.asyncRegester(opt) ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings) {#module_rostermanage.asyncregester}
 用户注册
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..UserSettings) - 用户设置  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings) - 用户设置  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -767,10 +767,10 @@
 | opt.username | <code>string</code> | 用户名 |
 | opt.password | <code>string</code> | 密码 |
 
-## rosterManage.asyncDeleteRoster(param) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rosterManage.asyncDeleteRoster}
+## rosterManage.asyncDeleteRoster(param) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rostermanage.asyncdeleteroster}
 删除好友
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 请求结果  
 
 | Param | Type | Description |
@@ -778,105 +778,105 @@
 | param | <code>object</code> | 参数 |
 | param.user_id | <code>number</code> | 好友的用户ID |
 
-## rosterManage.asnycGetRosterListDetailByIds(roster_ids) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterItem&gt;&gt;</code> {#module_rosterManage.asnycGetRosterListDetailByIds}
+## rosterManage.asnycGetRosterListDetailByIds(roster_ids) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterItem&gt;&gt;</code> {#module_rostermanage.asnycgetrosterlistdetailbyids}
 根据id列表获取用户详细信息
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~RosterItem&gt;&gt;</code> - 用户详细信息列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | roster_ids | <code>Array.&lt;number&gt;</code> | 用户ID列表 |
 
-## rosterManage.getAllRosterDetail() ⇒ [<code>Array.&lt;RosterItem&gt;</code>](#module_types..RosterItem) {#module_rosterManage.getAllRosterDetail}
+## rosterManage.getAllRosterDetail() ⇒ [<code>Array.&lt;RosterItem&gt;</code>](#module_types..rosteritem) {#module_rostermanage.getallrosterdetail}
 获取缓存的所有用户详细信息
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>Array.&lt;RosterItem&gt;</code>](#module_types..RosterItem) - 用户详细信息列表  
-## rosterManage.asyncGetUserProfile(force) ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..UserProfile) {#module_rosterManage.asyncGetUserProfile}
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>Array.&lt;RosterItem&gt;</code>](#module_types..rosteritem) - 用户详细信息列表  
+## rosterManage.asyncGetUserProfile(force) ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile) {#module_rostermanage.asyncgetuserprofile}
 获取自己的用户信息
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..UserProfile) - 用户信息  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile) - 用户信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | force | <code>boolean</code> | 是否强制从服务器拉取： true - 从服务器拉取， false - 优先从本地存储获取 |
 
-## rosterManage.getRosterMessageByRid(uid) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..Meta) {#module_rosterManage.getRosterMessageByRid}
+## rosterManage.getRosterMessageByRid(uid) ⇒ [<code>Array.&lt;Meta&gt;</code>](#module_types..meta) {#module_rostermanage.getrostermessagebyrid}
 根据会话ID获取聊天消息
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>Array.&lt;Meta&gt;</code>](#module_types..Meta) - 聊天消息列表  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>Array.&lt;Meta&gt;</code>](#module_types..meta) - 聊天消息列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | uid | <code>number</code> | 会话ID |
 
-## rosterManage.readRosterMessage(roster_id, mid) {#module_rosterManage.readRosterMessage}
+## rosterManage.readRosterMessage(roster_id, mid) {#module_rostermanage.readrostermessage}
 修改消息状态为已读
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | roster_id | <code>number</code> | 会话ID |
 | mid | <code>number</code> | 消息ID |
 
-## rosterManage.recallMessage(uid, mid) {#module_rosterManage.recallMessage}
+## rosterManage.recallMessage(uid, mid) {#module_rostermanage.recallmessage}
 撤回消息，只能撤回5分钟内的
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | uid | <code>number</code> | 会话ID |
 | mid | <code>number</code> | 消息ID |
 
-## rosterManage.unreadMessage(uid, mid) {#module_rosterManage.unreadMessage}
+## rosterManage.unreadMessage(uid, mid) {#module_rostermanage.unreadmessage}
 设置消息成未读
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | uid | <code>number</code> | 会话ID |
 | mid | <code>number</code> | 消息ID |
 
-## rosterManage.deleteMessage(uid, mid) {#module_rosterManage.deleteMessage}
+## rosterManage.deleteMessage(uid, mid) {#module_rostermanage.deletemessage}
 删除消息
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | uid | <code>number</code> | 会话ID |
 | mid | <code>number</code> | 消息ID |
 
-## rosterManage.getRosterInfo(rid) ⇒ [<code>RosterItem</code>](#module_types..RosterItem) {#module_rosterManage.getRosterInfo}
+## rosterManage.getRosterInfo(rid) ⇒ [<code>RosterItem</code>](#module_types..rosteritem) {#module_rostermanage.getrosterinfo}
 获取好友信息
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>RosterItem</code>](#module_types..RosterItem) - 好友信息  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>RosterItem</code>](#module_types..rosteritem) - 好友信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | rid | <code>number</code> | 好友ID |
 
-## rosterManage.getUnreadCount(uid) ⇒ <code>number</code> {#module_rosterManage.getUnreadCount}
+## rosterManage.getUnreadCount(uid) ⇒ <code>number</code> {#module_rostermanage.getunreadcount}
 获取指定会话的未读数
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>number</code> - 未读数  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | uid | <code>number</code> | 会话IID |
 
-## rosterManage.asyncGetApplyList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterApplication&gt;&gt;</code> {#module_rosterManage.asyncGetApplyList}
+## rosterManage.asyncGetApplyList(params) ⇒ <code>Promise.&lt;Array.&lt;module:types~RosterApplication&gt;&gt;</code> {#module_rostermanage.asyncgetapplylist}
 获取好友申请列表
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;module:types~RosterApplication&gt;&gt;</code> - 好友申请列表  
 
 | Param | Type | Description |
@@ -884,20 +884,20 @@
 | params | <code>object</code> | 参数 |
 | params.cursor | <code>number</code> | 从哪开始获取：可以传空字符串表示从头开始取 |
 
-## rosterManage.asyncGetBlockedlist(params) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_rosterManage.asyncGetBlockedlist}
+## rosterManage.asyncGetBlockedlist(params) ⇒ <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> {#module_rostermanage.asyncgetblockedlist}
 获取黑名单
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;Array.&lt;number&gt;&gt;</code> - 用户ID列表  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | 参数：空对象 |
 
-## rosterManage.asyncBlockeAdd(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rosterManage.asyncBlockeAdd}
+## rosterManage.asyncBlockeAdd(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rostermanage.asyncblockeadd}
 加入黑名单
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -905,10 +905,10 @@
 | params | <code>object</code> | 参数 |
 | params.user_id | <code>number</code> | 用户ID |
 
-## rosterManage.asyncBlockeRemove(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rosterManage.asyncBlockeRemove}
+## rosterManage.asyncBlockeRemove(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rostermanage.asyncblockeremove}
 移除黑名单
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -916,10 +916,10 @@
 | params | <code>object</code> | 参数 |
 | params.user_id | <code>number</code> | 用户ID |
 
-## rosterManage.asyncApply(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rosterManage.asyncApply}
+## rosterManage.asyncApply(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rostermanage.asyncapply}
 请求加为好友
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -928,10 +928,10 @@
 | params.user_id | <code>number</code> | 用户ID |
 | params.alias | <code>string</code> | 备注 |
 
-## rosterManage.asyncAccept(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rosterManage.asyncAccept}
+## rosterManage.asyncAccept(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rostermanage.asyncaccept}
 通过好友申请
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -939,10 +939,10 @@
 | params | <code>object</code> | 参数 |
 | params.user_id | <code>number</code> | 用户ID |
 
-## rosterManage.asyncDecline(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rosterManage.asyncDecline}
+## rosterManage.asyncDecline(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rostermanage.asyncdecline}
 拒绝好友申请
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -950,10 +950,10 @@
 | params | <code>object</code> | 参数 |
 | params.user_id | <code>number</code> | 用户ID |
 
-## rosterManage.asyncUpdateRosterExt(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rosterManage.asyncUpdateRosterExt}
+## rosterManage.asyncUpdateRosterExt(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_rostermanage.asyncupdaterosterext}
 修改好友扩展字段
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -962,48 +962,48 @@
 | params.user_id | <code>number</code> | 用户ID |
 | params.ext | <code>string</code> | 扩展字段 |
 
-## rosterManage.asyncSearchRosterByName(params) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem) {#module_rosterManage.asyncSearchRosterByName}
+## rosterManage.asyncSearchRosterByName(params) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) {#module_rostermanage.asyncsearchrosterbyname}
 按名称搜索用户
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem) - 用户信息  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) - 用户信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | 参数 |
 | params.username | <code>string</code> | 用户名 |
 
-## rosterManage.asyncSearchRosterById(params) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem) {#module_rosterManage.asyncSearchRosterById}
+## rosterManage.asyncSearchRosterById(params) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) {#module_rostermanage.asyncsearchrosterbyid}
 按ID搜索用户
 
-**Kind**: static method of [<code>rosterManage</code>](#module_rosterManage)  
-**Returns**: [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..RosterItem) - 用户信息  
+**Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
+**Returns**: [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) - 用户信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | 参数 |
 | params.user_id | <code>number</code> | 用户ID |
 
-# sysManage {#module_sysManage}
+# sysManage {#module_sysmanage}
 
-* [sysManage](#module_sysManage)
-    * [.sendRosterMessage(msg)](#module_sysManage.sendRosterMessage) ⇒ <code>number</code>
-    * [.sendGroupMessage(msg)](#module_sysManage.sendGroupMessage) ⇒ <code>number</code>
-    * [.requireHistoryMessage(uid, sid, amount)](#module_sysManage.requireHistoryMessage)
-    * [.sendMentionMessage(params)](#module_sysManage.sendMentionMessage) ⇒ <code>number</code>
-    * [.sendInputStatusMessage(uid, status)](#module_sysManage.sendInputStatusMessage) ⇒ <code>number</code>
-    * [.forwardMessage(param)](#module_sysManage.forwardMessage) ⇒ <code>number</code>
-    * [.getMessageStatus(cid, mid, isGroup)](#module_sysManage.getMessageStatus) ⇒ <code>string</code>
-    * [.asyncFileUpload(param)](#module_sysManage.asyncFileUpload) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..FileUploadResult)
-    * [.getImage(param)](#module_sysManage.getImage) ⇒ <code>string</code>
-    * [.deleteConversation(id, other_devices)](#module_sysManage.deleteConversation)
-    * [.asyncGetGroupAvatarUploadUrl(params)](#module_sysManage.asyncGetGroupAvatarUploadUrl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..FileUpload)
-    * [.asyncGetFileUploadChatFileUrl(params)](#module_sysManage.asyncGetFileUploadChatFileUrl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..FileUpload)
+* [sysManage](#module_sysmanage)
+    * [.sendRosterMessage(msg)](#module_sysmanage.sendrostermessage) ⇒ <code>number</code>
+    * [.sendGroupMessage(msg)](#module_sysmanage.sendgroupmessage) ⇒ <code>number</code>
+    * [.requireHistoryMessage(uid, sid, amount)](#module_sysmanage.requirehistorymessage)
+    * [.sendMentionMessage(params)](#module_sysmanage.sendmentionmessage) ⇒ <code>number</code>
+    * [.sendInputStatusMessage(uid, status)](#module_sysmanage.sendinputstatusmessage) ⇒ <code>number</code>
+    * [.forwardMessage(param)](#module_sysmanage.forwardmessage) ⇒ <code>number</code>
+    * [.getMessageStatus(cid, mid, isGroup)](#module_sysmanage.getmessagestatus) ⇒ <code>string</code>
+    * [.asyncFileUpload(param)](#module_sysmanage.asyncfileupload) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..fileuploadresult)
+    * [.getImage(param)](#module_sysmanage.getimage) ⇒ <code>string</code>
+    * [.deleteConversation(id, other_devices)](#module_sysmanage.deleteconversation)
+    * [.asyncGetGroupAvatarUploadUrl(params)](#module_sysmanage.asyncgetgroupavataruploadurl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload)
+    * [.asyncGetFileUploadChatFileUrl(params)](#module_sysmanage.asyncgetfileuploadchatfileurl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload)
 
-## sysManage.sendRosterMessage(msg) ⇒ <code>number</code> {#module_sysManage.sendRosterMessage}
+## sysManage.sendRosterMessage(msg) ⇒ <code>number</code> {#module_sysmanage.sendrostermessage}
 发送单聊消息
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 **Returns**: <code>number</code> - 客户端生成的消息ID  
 
 | Param | Type | Description |
@@ -1015,10 +1015,10 @@
 | msg.ext | <code>string</code> \| <code>object</code> | 扩展字段 |
 | msg.attachment | <code>string</code> \| <code>object</code> | 附件信息 |
 
-## sysManage.sendGroupMessage(msg) ⇒ <code>number</code> {#module_sysManage.sendGroupMessage}
+## sysManage.sendGroupMessage(msg) ⇒ <code>number</code> {#module_sysmanage.sendgroupmessage}
 发送群聊消息
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 **Returns**: <code>number</code> - 客户端生成的消息ID  
 
 | Param | Type | Description |
@@ -1031,10 +1031,10 @@
 | msg.attachment | <code>string</code> \| <code>object</code> | 附件信息 |
 | msg.priority | <code>number</code> | 设置消息的扩散优先级，默认为0。0表示扩散，数字越小扩散的越多。 |
 
-## sysManage.requireHistoryMessage(uid, sid, amount) {#module_sysManage.requireHistoryMessage}
+## sysManage.requireHistoryMessage(uid, sid, amount) {#module_sysmanage.requirehistorymessage}
 请求历史消息
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -1042,10 +1042,10 @@
 | sid | <code>number</code> | 消息ID: 从哪个消息向前拉取，传0表示从最新一条消息开始拉取。 |
 | amount | <code>number</code> | 拉取的条数 |
 
-## sysManage.sendMentionMessage(params) ⇒ <code>number</code> {#module_sysManage.sendMentionMessage}
+## sysManage.sendMentionMessage(params) ⇒ <code>number</code> {#module_sysmanage.sendmentionmessage}
 群发送&#64;消息
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 **Returns**: <code>number</code> - 客户端生成的消息ID  
 
 | Param | Type | Description |
@@ -1059,10 +1059,10 @@
 | params.mentionedMessage | <code>string</code> | &#64;消息的推送内容 |
 | params.senderNickname | <code>string</code> | 发送者昵称 |
 
-## sysManage.sendInputStatusMessage(uid, status) ⇒ <code>number</code> {#module_sysManage.sendInputStatusMessage}
+## sysManage.sendInputStatusMessage(uid, status) ⇒ <code>number</code> {#module_sysmanage.sendinputstatusmessage}
 发送输入状态消息
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 **Returns**: <code>number</code> - 客户端生成的消息ID  
 
 | Param | Type | Description |
@@ -1070,10 +1070,10 @@
 | uid | <code>number</code> | 会话ID |
 | status | <code>string</code> | 状态： nothing - 未输入， typing - 正在输入 |
 
-## sysManage.forwardMessage(param) ⇒ <code>number</code> {#module_sysManage.forwardMessage}
+## sysManage.forwardMessage(param) ⇒ <code>number</code> {#module_sysmanage.forwardmessage}
 转发消息
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 **Returns**: <code>number</code> - 客户端生成的消息ID  
 
 | Param | Type | Description |
@@ -1083,10 +1083,10 @@
 | param.gid | <code>number</code> | 接收方群组ID（仅转发群聊时设置） |
 | param.mid | <code>number</code> | 要转发的消息ID |
 
-## sysManage.getMessageStatus(cid, mid, isGroup) ⇒ <code>string</code> {#module_sysManage.getMessageStatus}
+## sysManage.getMessageStatus(cid, mid, isGroup) ⇒ <code>string</code> {#module_sysmanage.getmessagestatus}
 获取消息的状态
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 **Returns**: <code>string</code> - 消息状态:   unread - 未读， delivered - 已投递， read - 已读  
 
 | Param | Type | Default | Description |
@@ -1095,11 +1095,11 @@
 | mid | <code>number</code> |  | 消息ID |
 | isGroup | <code>boolean</code> | <code>false</code> | 是否是群聊 |
 
-## sysManage.asyncFileUpload(param) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..FileUploadResult) {#module_sysManage.asyncFileUpload}
+## sysManage.asyncFileUpload(param) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..fileuploadresult) {#module_sysmanage.asyncfileupload}
 上传文件
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
-**Returns**: [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..FileUploadResult) - 文件上传结果  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
+**Returns**: [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..fileuploadresult) - 文件上传结果  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -1110,12 +1110,12 @@
 | param.file | <code>File</code> | 文件 |
 | param.fileType | <code>string</code> | 文件类型：file - 普通聊天文件, audio - 语音聊天文件(amr格式),image - 图片聊天文件, video - 视频聊天文件, audio-mp3 - 语音聊天文件(mp3格式), shareFile - 普通共享文件, shareAudio - 语音共享文件, shareImage - 图片共享文件, shareVideo - 视频共享文件 |
 | param.chatType | <code>number</code> | 聊天类型： roster - 单聊, group - 群聊 |
-| param.processCallback | [<code>fileUploadProgress</code>](#module_types..fileUploadProgress) | 上传进度回调 |
+| param.processCallback | [<code>fileUploadProgress</code>](#module_types..fileuploadprogress) | 上传进度回调 |
 
-## sysManage.getImage(param) ⇒ <code>string</code> {#module_sysManage.getImage}
+## sysManage.getImage(param) ⇒ <code>string</code> {#module_sysmanage.getimage}
 拼装图片路径
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 **Returns**: <code>string</code> - 图片地址  
 
 | Param | Type | Description |
@@ -1126,32 +1126,32 @@
 | param.thumbnail | <code>boolean</code> | 是否缩略图：默认为true |
 | param.sdefault | <code>string</code> | 默认图片地址 |
 
-## sysManage.deleteConversation(id, other_devices) {#module_sysManage.deleteConversation}
+## sysManage.deleteConversation(id, other_devices) {#module_sysmanage.deleteconversation}
 删除会话
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | id | <code>number</code> |  | 会话ID |
 | other_devices | <code>boolean</code> | <code>true</code> | 是否同时删除其它设备上的会话 |
 
-## sysManage.asyncGetGroupAvatarUploadUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..FileUpload) {#module_sysManage.asyncGetGroupAvatarUploadUrl}
+## sysManage.asyncGetGroupAvatarUploadUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) {#module_sysmanage.asyncgetgroupavataruploadurl}
 获取上传群头像URL
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
-**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..FileUpload) - 文件上传信息  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
+**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) - 文件上传信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-## sysManage.asyncGetFileUploadChatFileUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..FileUpload) {#module_sysManage.asyncGetFileUploadChatFileUrl}
+## sysManage.asyncGetFileUploadChatFileUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) {#module_sysmanage.asyncgetfileuploadchatfileurl}
 获取聊天文件上传地址
 
-**Kind**: static method of [<code>sysManage</code>](#module_sysManage)  
-**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..FileUpload) - 文件上传信息  
+**Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
+**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) - 文件上传信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -1160,43 +1160,43 @@
 | params.to_type | <code>number</code> | 会话类型： 1 - 用户，2 - 群组 |
 | params.to_id | <code>number</code> | 会话ID |
 
-# userManage {#module_userManage}
+# userManage {#module_usermanage}
 
-* [userManage](#module_userManage)
-    * [.getToken()](#module_userManage.getToken) ⇒ <code>string</code>
-    * [.getUid()](#module_userManage.getUid) ⇒ <code>number</code>
-    * [.getAppid()](#module_userManage.getAppid) ⇒ <code>string</code>
-    * [.getConversationList()](#module_userManage.getConversationList) ⇒ [<code>Array.&lt;ConversationItem&gt;</code>](#module_types..ConversationItem)
-    * [.asyncUpdateAvatar(params)](#module_userManage.asyncUpdateAvatar) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncUpdateNickName(params)](#module_userManage.asyncUpdateNickName) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncGetProfile()](#module_userManage.asyncGetProfile) ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..UserProfile)
-    * [.asyncUpdateProfile(params)](#module_userManage.asyncUpdateProfile) ⇒ <code>Promise.&lt;boolean&gt;</code>
-    * [.asyncGetSettings()](#module_userManage.asyncGetSettings) ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..UserSettings)
-    * [.asyncUpdateSettings(settings)](#module_userManage.asyncUpdateSettings) ⇒ <code>Promise.&lt;boolean&gt;</code>
+* [userManage](#module_usermanage)
+    * [.getToken()](#module_usermanage.gettoken) ⇒ <code>string</code>
+    * [.getUid()](#module_usermanage.getuid) ⇒ <code>number</code>
+    * [.getAppid()](#module_usermanage.getappid) ⇒ <code>string</code>
+    * [.getConversationList()](#module_usermanage.getconversationlist) ⇒ [<code>Array.&lt;ConversationItem&gt;</code>](#module_types..conversationitem)
+    * [.asyncUpdateAvatar(params)](#module_usermanage.asyncupdateavatar) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncUpdateNickName(params)](#module_usermanage.asyncupdatenickname) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncGetProfile()](#module_usermanage.asyncgetprofile) ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile)
+    * [.asyncUpdateProfile(params)](#module_usermanage.asyncupdateprofile) ⇒ <code>Promise.&lt;boolean&gt;</code>
+    * [.asyncGetSettings()](#module_usermanage.asyncgetsettings) ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings)
+    * [.asyncUpdateSettings(settings)](#module_usermanage.asyncupdatesettings) ⇒ <code>Promise.&lt;boolean&gt;</code>
 
-## userManage.getToken() ⇒ <code>string</code> {#module_userManage.getToken}
+## userManage.getToken() ⇒ <code>string</code> {#module_usermanage.gettoken}
 获取登录用户的token
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>string</code> - 用户的token  
-## userManage.getUid() ⇒ <code>number</code> {#module_userManage.getUid}
+## userManage.getUid() ⇒ <code>number</code> {#module_usermanage.getuid}
 获取登录用户的uid
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>number</code> - 用户ID  
-## userManage.getAppid() ⇒ <code>string</code> {#module_userManage.getAppid}
+## userManage.getAppid() ⇒ <code>string</code> {#module_usermanage.getappid}
 获取appid
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>string</code> - APP ID  
-## userManage.getConversationList() ⇒ [<code>Array.&lt;ConversationItem&gt;</code>](#module_types..ConversationItem) {#module_userManage.getConversationList}
+## userManage.getConversationList() ⇒ [<code>Array.&lt;ConversationItem&gt;</code>](#module_types..conversationitem) {#module_usermanage.getconversationlist}
 获取最近会话列表
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
-## userManage.asyncUpdateAvatar(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_userManage.asyncUpdateAvatar}
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
+## userManage.asyncUpdateAvatar(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdateavatar}
 更新头像
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -1204,10 +1204,10 @@
 | params | <code>object</code> | 参数 |
 | params.avatar | <code>string</code> | 头像 url |
 
-## userManage.asyncUpdateNickName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_userManage.asyncUpdateNickName}
+## userManage.asyncUpdateNickName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdatenickname}
 更新昵称
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -1215,15 +1215,15 @@
 | params | <code>object</code> | 参数 |
 | params.nick_name | <code>string</code> | 昵称 |
 
-## userManage.asyncGetProfile() ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..UserProfile) {#module_userManage.asyncGetProfile}
+## userManage.asyncGetProfile() ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile) {#module_usermanage.asyncgetprofile}
 获取用户profile
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
-**Returns**: [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..UserProfile) - 用户信息  
-## userManage.asyncUpdateProfile(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_userManage.asyncUpdateProfile}
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
+**Returns**: [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile) - 用户信息  
+## userManage.asyncUpdateProfile(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdateprofile}
 更新用户profile
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
@@ -1234,80 +1234,80 @@
 | params.private_info | <code>string</code> | 私有信息，仅自己可见 |
 | params.public_info | <code>string</code> | 公开信息，好友和陌生人可见 |
 
-## userManage.asyncGetSettings() ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..UserSettings) {#module_userManage.asyncGetSettings}
+## userManage.asyncGetSettings() ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings) {#module_usermanage.asyncgetsettings}
 获取用户设置信息
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
-**Returns**: [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..UserSettings) - 用户信息  
-## userManage.asyncUpdateSettings(settings) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_userManage.asyncUpdateSettings}
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
+**Returns**: [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings) - 用户信息  
+## userManage.asyncUpdateSettings(settings) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdatesettings}
 修改用户设置
 
-**Kind**: static method of [<code>userManage</code>](#module_userManage)  
+**Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>Promise.&lt;boolean&gt;</code> - 是否成功  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| settings | [<code>UserSettings</code>](#module_types..UserSettings) | 更新的设置 |
+| settings | [<code>UserSettings</code>](#module_types..usersettings) | 更新的设置 |
 
 # types {#module_types}
 
 * [types](#module_types)
-    * ["flooNotice" (res)](#event_flooNotice)
-    * ["flooError" (res)](#event_flooError)
-    * ["loginFail" (desc)](#event_loginFail)
-    * ["loginSuccess" (res)](#event_loginSuccess)
-    * ["onGroupListUpdate" (meta)](#event_onGroupListUpdate)
-    * ["onGroupMemberChanged" (groupId)](#event_onGroupMemberChanged)
-    * ["onGroupMessage" (meta)](#event_onGroupMessage)
-    * ["onInputStatusMessage" (res)](#event_onInputStatusMessage)
-    * ["onMentionMessage" (meta)](#event_onMentionMessage)
-    * ["onMessageCanceled" (res)](#event_onMessageCanceled)
-    * ["onMessageDeleted" (res)](#event_onMessageDeleted)
-    * ["onMessageRecalled" (res)](#event_onMessageRecalled)
-    * ["onMessageStatusChanged" (res)](#event_onMessageStatusChanged)
-    * ["onReceiveHistoryMsg" (res)](#event_onReceiveHistoryMsg)
-    * ["onRosterInfoUpdate" (res)](#event_onRosterInfoUpdate)
-    * ["onRosterListUpdate" (meta)](#event_onRosterListUpdate)
-    * ["onRosterMessage" (meta)](#event_onRosterMessage)
-    * ["onSendingMessageStatusChanged" (res)](#event_onSendingMessageStatusChanged)
-    * ["onUnreadChange" (cid)](#event_onUnreadChange)
-    * ["recentlistUpdate"](#event_recentlistUpdate)
-    * ["onGroupCreated" (meta)](#event_onGroupCreated)
-    * ["onGroupDestoryed" (meta)](#event_onGroupDestoryed)
-    * ["onGroupJoined" (meta)](#event_onGroupJoined)
-    * ["onGroupApplyAccepted" (meta)](#event_onGroupApplyAccepted)
-    * ["onGroupApplyDeclined" (meta)](#event_onGroupApplyDeclined)
-    * ["onGroupBaned" (meta)](#event_onGroupBaned)
-    * ["onGroupUnbaned" (meta)](#event_onGroupUnbaned)
-    * [~RosterItem](#module_types..RosterItem) : <code>object</code>
-    * [~UserSettings](#module_types..UserSettings) : <code>object</code>
-    * [~UserProfile](#module_types..UserProfile) : <code>object</code>
-    * [~Meta](#module_types..Meta) : <code>object</code>
-    * [~RosterApplication](#module_types..RosterApplication) : <code>object</code>
-    * [~GroupInfoAndSettings](#module_types..GroupInfoAndSettings) : <code>object</code>
-    * [~BriefGroupInfoAndSettings](#module_types..BriefGroupInfoAndSettings) : <code>object</code>
-    * [~GroupMember](#module_types..GroupMember) : <code>object</code>
-    * [~GroupMemberBanned](#module_types..GroupMemberBanned) : <code>object</code>
-    * [~GroupUserRelationResponse](#module_types..GroupUserRelationResponse) : <code>object</code>
-    * [~GroupAnnouncement](#module_types..GroupAnnouncement) : <code>object</code>
-    * [~GroupInfoRequest](#module_types..GroupInfoRequest) : <code>object</code>
-    * [~GroupBannedMemberRequest](#module_types..GroupBannedMemberRequest) : <code>object</code>
-    * [~GroupBlockedListItem](#module_types..GroupBlockedListItem) : <code>object</code>
-    * [~GroupInvitation](#module_types..GroupInvitation) : <code>object</code>
-    * [~GroupApplication](#module_types..GroupApplication) : <code>object</code>
-    * [~GroupSharedFile](#module_types..GroupSharedFile) : <code>object</code>
-    * [~GroupSharedFileResponse](#module_types..GroupSharedFileResponse) : <code>object</code>
-    * [~GroupBanAllResponse](#module_types..GroupBanAllResponse) : <code>object</code>
-    * [~FileUpload](#module_types..FileUpload) : <code>object</code>
-    * [~FileUploadResult](#module_types..FileUploadResult) : <code>object</code>
-    * [~fileUploadProgress](#module_types..fileUploadProgress) : <code>function</code>
-    * [~ConversationItem](#module_types..ConversationItem) : <code>object</code>
-    * [~UserProfile](#module_types..UserProfile) : <code>object</code>
-    * [~UserSettings](#module_types..UserSettings) : <code>object</code>
-    * [~Event](#module_types..Event) : <code>string</code>
-    * [~EventCallback](#module_types..EventCallback) : <code>function</code>
+    * ["flooNotice" (res)](#event_floonotice)
+    * ["flooError" (res)](#event_flooerror)
+    * ["loginFail" (desc)](#event_loginfail)
+    * ["loginSuccess" (res)](#event_loginsuccess)
+    * ["onGroupListUpdate" (meta)](#event_ongrouplistupdate)
+    * ["onGroupMemberChanged" (groupId)](#event_ongroupmemberchanged)
+    * ["onGroupMessage" (meta)](#event_ongroupmessage)
+    * ["onInputStatusMessage" (res)](#event_oninputstatusmessage)
+    * ["onMentionMessage" (meta)](#event_onmentionmessage)
+    * ["onMessageCanceled" (res)](#event_onmessagecanceled)
+    * ["onMessageDeleted" (res)](#event_onmessagedeleted)
+    * ["onMessageRecalled" (res)](#event_onmessagerecalled)
+    * ["onMessageStatusChanged" (res)](#event_onmessagestatuschanged)
+    * ["onReceiveHistoryMsg" (res)](#event_onreceivehistorymsg)
+    * ["onRosterInfoUpdate" (res)](#event_onrosterinfoupdate)
+    * ["onRosterListUpdate" (meta)](#event_onrosterlistupdate)
+    * ["onRosterMessage" (meta)](#event_onrostermessage)
+    * ["onSendingMessageStatusChanged" (res)](#event_onsendingmessagestatuschanged)
+    * ["onUnreadChange" (cid)](#event_onunreadchange)
+    * ["recentlistUpdate"](#event_recentlistupdate)
+    * ["onGroupCreated" (meta)](#event_ongroupcreated)
+    * ["onGroupDestoryed" (meta)](#event_ongroupdestoryed)
+    * ["onGroupJoined" (meta)](#event_ongroupjoined)
+    * ["onGroupApplyAccepted" (meta)](#event_ongroupapplyaccepted)
+    * ["onGroupApplyDeclined" (meta)](#event_ongroupapplydeclined)
+    * ["onGroupBaned" (meta)](#event_ongroupbaned)
+    * ["onGroupUnbaned" (meta)](#event_ongroupunbaned)
+    * [~RosterItem](#module_types..rosteritem) : <code>object</code>
+    * [~UserSettings](#module_types..usersettings) : <code>object</code>
+    * [~UserProfile](#module_types..userprofile) : <code>object</code>
+    * [~Meta](#module_types..meta) : <code>object</code>
+    * [~RosterApplication](#module_types..rosterapplication) : <code>object</code>
+    * [~GroupInfoAndSettings](#module_types..groupinfoandsettings) : <code>object</code>
+    * [~BriefGroupInfoAndSettings](#module_types..briefgroupinfoandsettings) : <code>object</code>
+    * [~GroupMember](#module_types..groupmember) : <code>object</code>
+    * [~GroupMemberBanned](#module_types..groupmemberbanned) : <code>object</code>
+    * [~GroupUserRelationResponse](#module_types..groupuserrelationresponse) : <code>object</code>
+    * [~GroupAnnouncement](#module_types..groupannouncement) : <code>object</code>
+    * [~GroupInfoRequest](#module_types..groupinforequest) : <code>object</code>
+    * [~GroupBannedMemberRequest](#module_types..groupbannedmemberrequest) : <code>object</code>
+    * [~GroupBlockedListItem](#module_types..groupblockedlistitem) : <code>object</code>
+    * [~GroupInvitation](#module_types..groupinvitation) : <code>object</code>
+    * [~GroupApplication](#module_types..groupapplication) : <code>object</code>
+    * [~GroupSharedFile](#module_types..groupsharedfile) : <code>object</code>
+    * [~GroupSharedFileResponse](#module_types..groupsharedfileresponse) : <code>object</code>
+    * [~GroupBanAllResponse](#module_types..groupbanallresponse) : <code>object</code>
+    * [~FileUpload](#module_types..fileupload) : <code>object</code>
+    * [~FileUploadResult](#module_types..fileuploadresult) : <code>object</code>
+    * [~fileUploadProgress](#module_types..fileuploadprogress) : <code>function</code>
+    * [~ConversationItem](#module_types..conversationitem) : <code>object</code>
+    * [~UserProfile](#module_types..userprofile) : <code>object</code>
+    * [~UserSettings](#module_types..usersettings) : <code>object</code>
+    * [~Event](#module_types..event) : <code>string</code>
+    * [~EventCallback](#module_types..eventcallback) : <code>function</code>
 
-## "flooNotice" (res) {#event_flooNotice}
+## "flooNotice" (res) {#event_floonotice}
 Floo通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1343,7 +1343,7 @@ Floo通知
 {category: 'userNotice', desc:'DEVICE_REMOVED'} // 设备被移除的通知
 {category: 'userNotice', desc:'CLUSTER_CHANGED'} // 用户所在集群改变 需要重新登录
 ```
-## "flooError" (res) {#event_flooError}
+## "flooError" (res) {#event_flooerror}
 Floo错误
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1363,7 +1363,7 @@ Floo错误
 {category: 'LICENSE', desc:'超出 LICENSE 用户数限制，请购买更高规格服务。'}
 {category: 'DNS_FAILED', desc: dnsServer } // DNS错误: 无法访问
 ```
-## "loginFail" (desc) {#event_loginFail}
+## "loginFail" (desc) {#event_loginfail}
 登录失败
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1372,7 +1372,7 @@ Floo错误
 | --- | --- | --- |
 | desc | <code>string</code> | 失败原因 |
 
-## "loginSuccess" (res) {#event_loginSuccess}
+## "loginSuccess" (res) {#event_loginsuccess}
 登录成功
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1381,16 +1381,16 @@ Floo错误
 | --- | --- | --- |
 | res | <code>object</code> | 空对象 |
 
-## "onGroupListUpdate" (meta) {#event_onGroupListUpdate}
+## "onGroupListUpdate" (meta) {#event_ongrouplistupdate}
 群列表更新
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) \| <code>undefined</code> | 通知消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) \| <code>undefined</code> | 通知消息内容 |
 
-## "onGroupMemberChanged" (groupId) {#event_onGroupMemberChanged}
+## "onGroupMemberChanged" (groupId) {#event_ongroupmemberchanged}
 群成员列表更新
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1399,16 +1399,16 @@ Floo错误
 | --- | --- | --- |
 | groupId | <code>number</code> | 群ID |
 
-## "onGroupMessage" (meta) {#event_onGroupMessage}
+## "onGroupMessage" (meta) {#event_ongroupmessage}
 收到群消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 消息内容 |
 
-## "onInputStatusMessage" (res) {#event_onInputStatusMessage}
+## "onInputStatusMessage" (res) {#event_oninputstatusmessage}
 对方正在输入
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1420,16 +1420,16 @@ Floo错误
 | res.from | <code>string</code> | 发送者用户ID |
 | res.to | <code>string</code> | 接收者用户ID |
 
-## "onMentionMessage" (meta) {#event_onMentionMessage}
+## "onMentionMessage" (meta) {#event_onmentionmessage}
 收到群组&#64;消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 消息内容 |
 
-## "onMessageCanceled" (res) {#event_onMessageCanceled}
+## "onMessageCanceled" (res) {#event_onmessagecanceled}
 消息被取消已读
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1440,7 +1440,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onMessageDeleted" (res) {#event_onMessageDeleted}
+## "onMessageDeleted" (res) {#event_onmessagedeleted}
 消息被删除
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1451,7 +1451,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onMessageRecalled" (res) {#event_onMessageRecalled}
+## "onMessageRecalled" (res) {#event_onmessagerecalled}
 消息被撤回
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1462,7 +1462,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onMessageStatusChanged" (res) {#event_onMessageStatusChanged}
+## "onMessageStatusChanged" (res) {#event_onmessagestatuschanged}
 消息状态变更：撤回/删除/已读
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1473,7 +1473,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onReceiveHistoryMsg" (res) {#event_onReceiveHistoryMsg}
+## "onReceiveHistoryMsg" (res) {#event_onreceivehistorymsg}
 收到历史消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1483,7 +1483,7 @@ Floo错误
 | res | <code>object</code> |  |
 | res.next | <code>number</code> | 下次取历史消息的key |
 
-## "onRosterInfoUpdate" (res) {#event_onRosterInfoUpdate}
+## "onRosterInfoUpdate" (res) {#event_onrosterinfoupdate}
 好友信息变更
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1493,25 +1493,25 @@ Floo错误
 | res | <code>object</code> |  |
 | res.rosterIds | <code>Array.&lt;number&gt;</code> | 好友的用户ID列表 |
 
-## "onRosterListUpdate" (meta) {#event_onRosterListUpdate}
+## "onRosterListUpdate" (meta) {#event_onrosterlistupdate}
 好友列表变更
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 好友通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 好友通知的消息内容 |
 
-## "onRosterMessage" (meta) {#event_onRosterMessage}
+## "onRosterMessage" (meta) {#event_onrostermessage}
 收到单聊消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 消息内容 |
 
-## "onSendingMessageStatusChanged" (res) {#event_onSendingMessageStatusChanged}
+## "onSendingMessageStatusChanged" (res) {#event_onsendingmessagestatuschanged}
 消息发送状态变更
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1522,7 +1522,7 @@ Floo错误
 | res.status: | <code>number</code> | 发送状态，取值为sending|failed|sent |
 | res.mid: | <code>number</code> | 客户端生成的client_mid |
 
-## "onUnreadChange" (cid) {#event_onUnreadChange}
+## "onUnreadChange" (cid) {#event_onunreadchange}
 未读数改变
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -1531,74 +1531,74 @@ Floo错误
 | --- | --- | --- |
 | cid | <code>number</code> | 会话ID |
 
-## "recentlistUpdate" {#event_recentlistUpdate}
+## "recentlistUpdate" {#event_recentlistupdate}
 最近会话更新
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
-## "onGroupCreated" (meta) {#event_onGroupCreated}
+## "onGroupCreated" (meta) {#event_ongroupcreated}
 群组创建通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 群通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupDestoryed" (meta) {#event_onGroupDestoryed}
+## "onGroupDestoryed" (meta) {#event_ongroupdestoryed}
 群组解散通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 群通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupJoined" (meta) {#event_onGroupJoined}
+## "onGroupJoined" (meta) {#event_ongroupjoined}
 成员入群通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 群通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupApplyAccepted" (meta) {#event_onGroupApplyAccepted}
+## "onGroupApplyAccepted" (meta) {#event_ongroupapplyaccepted}
 群申请被通过
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 群通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupApplyDeclined" (meta) {#event_onGroupApplyDeclined}
+## "onGroupApplyDeclined" (meta) {#event_ongroupapplydeclined}
 群申请被拒绝
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 群通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupBaned" (meta) {#event_onGroupBaned}
+## "onGroupBaned" (meta) {#event_ongroupbaned}
 被群禁言
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 群通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupUnbaned" (meta) {#event_onGroupUnbaned}
+## "onGroupUnbaned" (meta) {#event_ongroupunbaned}
 被群取消禁言
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| meta | [<code>Meta</code>](#module_types..Meta) | 群通知的消息内容 |
+| meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## types~RosterItem : <code>object</code> {#module_types..RosterItem}
+## types~RosterItem : <code>object</code> {#module_types..rosteritem}
 好友信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1619,7 +1619,7 @@ Floo错误
 | user_id | <code>number</code> | 好友用户ID,int64 |
 | username | <code>string</code> | 用户名 |
 
-## types~UserSettings : <code>object</code> {#module_types..UserSettings}
+## types~UserSettings : <code>object</code> {#module_types..usersettings}
 用户设置信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1645,7 +1645,7 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | vibratory | <code>boolean</code> | 收到消息时否振动 |
 
-## types~UserProfile : <code>object</code> {#module_types..UserProfile}
+## types~UserProfile : <code>object</code> {#module_types..userprofile}
 用户信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1663,7 +1663,7 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | username | <code>string</code> | 用户名 |
 
-## types~Meta : <code>object</code> {#module_types..Meta}
+## types~Meta : <code>object</code> {#module_types..meta}
 消息体
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1683,7 +1683,7 @@ Floo错误
 | timestamp | <code>string</code> | 消息发送时间戳（毫秒） |
 | toType | <code>string</code> | 接收者类型： roster - 好友， group - 群组 |
 
-## types~RosterApplication : <code>object</code> {#module_types..RosterApplication}
+## types~RosterApplication : <code>object</code> {#module_types..rosterapplication}
 加好友申请列表项
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1696,7 +1696,7 @@ Floo错误
 | status | <code>number</code> | 状态： 0 - 等待确认， 1 - 接受， 2 - 拒绝。 int32 |
 | user_id | <code>number</code> | 发起加好友申请的用户ID,int64 |
 
-## types~GroupInfoAndSettings : <code>object</code> {#module_types..GroupInfoAndSettings}
+## types~GroupInfoAndSettings : <code>object</code> {#module_types..groupinfoandsettings}
 群信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1725,7 +1725,7 @@ Floo错误
 | count | <code>number</code> | 群成员数 |
 | capacity | <code>number</code> | 群容量 |
 
-## types~BriefGroupInfoAndSettings : <code>object</code> {#module_types..BriefGroupInfoAndSettings}
+## types~BriefGroupInfoAndSettings : <code>object</code> {#module_types..briefgroupinfoandsettings}
 群简要信息及用户设置
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1745,7 +1745,7 @@ Floo错误
 | status | <code>number</code> | 群状态, 0：正常, 1：已解散,int32 |
 | type | <code>number</code> | 群类型: 1表示公开群，0表示私有群, 2表示聊天室。int32 |
 
-## types~GroupMember : <code>object</code> {#module_types..GroupMember}
+## types~GroupMember : <code>object</code> {#module_types..groupmember}
 群成员格式
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1758,7 +1758,7 @@ Floo错误
 | user_id | <code>number</code> | 用户id,int64 |
 | avatar | <code>string</code> | 头像地址 |
 
-## types~GroupMemberBanned : <code>object</code> {#module_types..GroupMemberBanned}
+## types~GroupMemberBanned : <code>object</code> {#module_types..groupmemberbanned}
 禁言成员
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1772,7 +1772,7 @@ Floo错误
 | avatar | <code>string</code> | 头像地址 |
 | expired_time | <code>number</code> | 禁言过期时间 |
 
-## types~GroupUserRelationResponse : <code>object</code> {#module_types..GroupUserRelationResponse}
+## types~GroupUserRelationResponse : <code>object</code> {#module_types..groupuserrelationresponse}
 群用户请求结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1784,7 +1784,7 @@ Floo错误
 | result | <code>string</code> | 结果 |
 | user_id | <code>number</code> | 用户ID，int64 |
 
-## types~GroupAnnouncement : <code>object</code> {#module_types..GroupAnnouncement}
+## types~GroupAnnouncement : <code>object</code> {#module_types..groupannouncement}
 群公告内容
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1799,7 +1799,7 @@ Floo错误
 | id | <code>number</code> | 公告id,int64 |
 | title | <code>string</code> | 公告标题 |
 
-## types~GroupInfoRequest : <code>object</code> {#module_types..GroupInfoRequest}
+## types~GroupInfoRequest : <code>object</code> {#module_types..groupinforequest}
 创建群
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1813,7 +1813,7 @@ Floo错误
 | type | <code>number</code> | 群类型 1表示公开群，0表示私有群, 2表示聊天室,int32 |
 | user_list | <code>Array.&lt;number&gt;</code> | 邀请入群的用户id列表 |
 
-## types~GroupBannedMemberRequest : <code>object</code> {#module_types..GroupBannedMemberRequest}
+## types~GroupBannedMemberRequest : <code>object</code> {#module_types..groupbannedmemberrequest}
 禁言请求
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1825,7 +1825,7 @@ Floo错误
 | group_id | <code>number</code> | 群id,int64 |
 | user_list | <code>Array.&lt;number&gt;</code> | 用户id列表 |
 
-## types~GroupBlockedListItem : <code>object</code> {#module_types..GroupBlockedListItem}
+## types~GroupBlockedListItem : <code>object</code> {#module_types..groupblockedlistitem}
 群组黑名单
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1837,7 +1837,7 @@ Floo错误
 | group_id | <code>number</code> | 群id,int64 |
 | create_at | <code>string</code> | 创建时间 |
 
-## types~GroupInvitation : <code>object</code> {#module_types..GroupInvitation}
+## types~GroupInvitation : <code>object</code> {#module_types..groupinvitation}
 群组邀请信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1853,7 +1853,7 @@ Floo错误
 | expire_time | <code>number</code> | 过期时间 |
 | create_at | <code>string</code> | 创建时间 |
 
-## types~GroupApplication : <code>object</code> {#module_types..GroupApplication}
+## types~GroupApplication : <code>object</code> {#module_types..groupapplication}
 群申请信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1867,7 +1867,7 @@ Floo错误
 | expire_time | <code>number</code> | 过期时间 |
 | status | <code>number</code> | 状态： 0 - 待处理，1 - 同意，2 - 拒绝 |
 
-## types~GroupSharedFile : <code>object</code> {#module_types..GroupSharedFile}
+## types~GroupSharedFile : <code>object</code> {#module_types..groupsharedfile}
 群共享文件返回格式
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1885,7 +1885,7 @@ Floo错误
 | uploader | <code>number</code> | 共享文件上传者,int64 |
 | url | <code>string</code> | 共享文件url |
 
-## types~GroupSharedFileResponse : <code>object</code> {#module_types..GroupSharedFileResponse}
+## types~GroupSharedFileResponse : <code>object</code> {#module_types..groupsharedfileresponse}
 删除群共享文件结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1897,7 +1897,7 @@ Floo错误
 | reason | <code>string</code> | 原因 |
 | result | <code>string</code> | 结果 |
 
-## types~GroupBanAllResponse : <code>object</code> {#module_types..GroupBanAllResponse}
+## types~GroupBanAllResponse : <code>object</code> {#module_types..groupbanallresponse}
 全员禁言结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1907,7 +1907,7 @@ Floo错误
 | --- | --- | --- |
 | ban_expire_time | <code>number</code> | 全员禁言过期时间,int64 |
 
-## types~FileUpload : <code>object</code> {#module_types..FileUpload}
+## types~FileUpload : <code>object</code> {#module_types..fileupload}
 文件上传信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1919,7 +1919,7 @@ Floo错误
 | oss_body_param | <code>object.&lt;string, string&gt;</code> | 额外参数 |
 | upload_url | <code>string</code> | 上传地址 |
 
-## types~FileUploadResult : <code>object</code> {#module_types..FileUploadResult}
+## types~FileUploadResult : <code>object</code> {#module_types..fileuploadresult}
 文件上传结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1929,7 +1929,7 @@ Floo错误
 | --- | --- | --- |
 | url | <code>string</code> | 下载地址 |
 
-## types~fileUploadProgress : <code>function</code> {#module_types..fileUploadProgress}
+## types~fileUploadProgress : <code>function</code> {#module_types..fileuploadprogress}
 文件上传进度回调
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1940,7 +1940,7 @@ Floo错误
 | res.loaded | <code>number</code> | 已下载字节数 |
 | res.total | <code>number</code> | 总字节数 |
 
-## types~ConversationItem : <code>object</code> {#module_types..ConversationItem}
+## types~ConversationItem : <code>object</code> {#module_types..conversationitem}
 会话信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1953,7 +1953,7 @@ Floo错误
 | timestamp | <code>string</code> | 消息发送时间戳（毫秒） |
 | type | <code>string</code> | 会话类型： roster - 单聊， group - 群聊 |
 
-## types~UserProfile : <code>object</code> {#module_types..UserProfile}
+## types~UserProfile : <code>object</code> {#module_types..userprofile}
 用户信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1971,7 +1971,7 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | username | <code>string</code> | 用户名 |
 
-## types~UserSettings : <code>object</code> {#module_types..UserSettings}
+## types~UserSettings : <code>object</code> {#module_types..usersettings}
 用户设置信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -1997,18 +1997,18 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | vibratory | <code>boolean</code> | 收到消息时否振动 |
 
-## types~Event : <code>string</code> {#module_types..Event}
+## types~Event : <code>string</code> {#module_types..event}
 监听事件名称
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
-## types~EventCallback : <code>function</code> {#module_types..EventCallback}
+## types~EventCallback : <code>function</code> {#module_types..eventcallback}
 监听事件回调
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| res | [<code>flooNotice</code>](#event_flooNotice) \| [<code>flooError</code>](#event_flooError) \| [<code>loginFail</code>](#event_loginFail) \| [<code>loginSuccess</code>](#event_loginSuccess) \| [<code>onGroupListUpdate</code>](#event_onGroupListUpdate) \| [<code>onGroupMemberChanged</code>](#event_onGroupMemberChanged) \| [<code>onGroupMessage</code>](#event_onGroupMessage) \| [<code>onInputStatusMessage</code>](#event_onInputStatusMessage) \| [<code>onMentionMessage</code>](#event_onMentionMessage) \| [<code>onMessageCanceled</code>](#event_onMessageCanceled) \| [<code>onMessageDeleted</code>](#event_onMessageDeleted) \| [<code>onMessageRecalled</code>](#event_onMessageRecalled) \| [<code>onMessageStatusChanged</code>](#event_onMessageStatusChanged) \| [<code>onReceiveHistoryMsg</code>](#event_onReceiveHistoryMsg) \| [<code>onRosterInfoUpdate</code>](#event_onRosterInfoUpdate) \| [<code>onRosterListUpdate</code>](#event_onRosterListUpdate) \| [<code>onRosterMessage</code>](#event_onRosterMessage) \| [<code>onSendingMessageStatusChanged</code>](#event_onSendingMessageStatusChanged) \| [<code>onUnreadChange</code>](#event_onUnreadChange) \| [<code>recentlistUpdate</code>](#event_recentlistUpdate) \| [<code>onGroupCreated</code>](#event_onGroupCreated) \| [<code>onGroupDestoryed</code>](#event_onGroupDestoryed) \| [<code>onGroupJoined</code>](#event_onGroupJoined) \| [<code>onGroupApplyAccepted</code>](#event_onGroupApplyAccepted) \| [<code>onGroupApplyDeclined</code>](#event_onGroupApplyDeclined) \| [<code>onGroupBaned</code>](#event_onGroupBaned) \| [<code>onGroupUnbaned</code>](#event_onGroupUnbaned) | 事件结果 |
+| res | [<code>flooNotice</code>](#event_floonotice) \| [<code>flooError</code>](#event_flooerror) \| [<code>loginFail</code>](#event_loginfail) \| [<code>loginSuccess</code>](#event_loginsuccess) \| [<code>onGroupListUpdate</code>](#event_ongrouplistupdate) \| [<code>onGroupMemberChanged</code>](#event_ongroupmemberchanged) \| [<code>onGroupMessage</code>](#event_ongroupmessage) \| [<code>onInputStatusMessage</code>](#event_oninputstatusmessage) \| [<code>onMentionMessage</code>](#event_onmentionmessage) \| [<code>onMessageCanceled</code>](#event_onmessagecanceled) \| [<code>onMessageDeleted</code>](#event_onmessagedeleted) \| [<code>onMessageRecalled</code>](#event_onmessagerecalled) \| [<code>onMessageStatusChanged</code>](#event_onmessagestatuschanged) \| [<code>onReceiveHistoryMsg</code>](#event_onreceivehistorymsg) \| [<code>onRosterInfoUpdate</code>](#event_onrosterinfoupdate) \| [<code>onRosterListUpdate</code>](#event_onrosterlistupdate) \| [<code>onRosterMessage</code>](#event_onrostermessage) \| [<code>onSendingMessageStatusChanged</code>](#event_onsendingmessagestatuschanged) \| [<code>onUnreadChange</code>](#event_onunreadchange) \| [<code>recentlistUpdate</code>](#event_recentlistupdate) \| [<code>onGroupCreated</code>](#event_ongroupcreated) \| [<code>onGroupDestoryed</code>](#event_ongroupdestoryed) \| [<code>onGroupJoined</code>](#event_ongroupjoined) \| [<code>onGroupApplyAccepted</code>](#event_ongroupapplyaccepted) \| [<code>onGroupApplyDeclined</code>](#event_ongroupapplydeclined) \| [<code>onGroupBaned</code>](#event_ongroupbaned) \| [<code>onGroupUnbaned</code>](#event_ongroupunbaned) | 事件结果 |
 
 # flooim {#module_flooim}
 
@@ -2016,9 +2016,9 @@ Floo错误
     * [.flooim(config)](#module_flooim.flooim) ⇒ <code>object</code>
     * [.login(opt)](#module_flooim.login)
     * [.qrlogin(opt)](#module_flooim.qrlogin)
-    * [.tokenLogin(opt)](#module_flooim.tokenLogin)
-    * [.idLogin(opt)](#module_flooim.idLogin)
-    * [.isLogin()](#module_flooim.isLogin) ⇒ <code>boolean</code>
+    * [.tokenLogin(opt)](#module_flooim.tokenlogin)
+    * [.idLogin(opt)](#module_flooim.idlogin)
+    * [.isLogin()](#module_flooim.islogin) ⇒ <code>boolean</code>
     * [.on(options, ext)](#module_flooim.on)
     * [.off(options, ext)](#module_flooim.off)
     * [.logout()](#module_flooim.logout)
@@ -2070,7 +2070,7 @@ const im = flooim(config);
 | opt.user_id | <code>number</code> | 用户ID |
 | opt.password | <code>string</code> | 密码 |
 
-## flooim.tokenLogin(opt) {#module_flooim.tokenLogin}
+## flooim.tokenLogin(opt) {#module_flooim.tokenlogin}
 token登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -2081,7 +2081,7 @@ token登录
 | opt.user_id | <code>number</code> | 用户ID |
 | opt.token | <code>string</code> | Token |
 
-## flooim.idLogin(opt) {#module_flooim.idLogin}
+## flooim.idLogin(opt) {#module_flooim.idlogin}
 使用用户ID和密码登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -2092,7 +2092,7 @@ token登录
 | opt.user_id | <code>number</code> | 用户ID |
 | opt.password | <code>string</code> | 密码 |
 
-## flooim.isLogin() ⇒ <code>boolean</code> {#module_flooim.isLogin}
+## flooim.isLogin() ⇒ <code>boolean</code> {#module_flooim.islogin}
 是否已登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -2104,8 +2104,8 @@ token登录
 
 | Param | Type | Description |
 | --- | --- | --- |
-| options | [<code>Event</code>](#module_types..Event) \| <code>Object.&lt;module:types~Event, module:types~EventCallback&gt;</code> | 可以为事件名，也可以为事件名和事件回调 |
-| ext | [<code>EventCallback</code>](#module_types..EventCallback) \| <code>undefined</code> | 事件回调，只有options为事件名时需要设置 |
+| options | [<code>Event</code>](#module_types..event) \| <code>Object.&lt;module:types~Event, module:types~EventCallback&gt;</code> | 可以为事件名，也可以为事件名和事件回调 |
+| ext | [<code>EventCallback</code>](#module_types..eventcallback) \| <code>undefined</code> | 事件回调，只有options为事件名时需要设置 |
 
 **Example**  
 ```js
@@ -2128,8 +2128,8 @@ im.on({
 
 | Param | Type | Description |
 | --- | --- | --- |
-| options | [<code>Event</code>](#module_types..Event) \| <code>Object.&lt;module:types~Event, module:types~EventCallback&gt;</code> | 可以为事件名，也可以为事件名和事件回调 |
-| ext | [<code>EventCallback</code>](#module_types..EventCallback) \| <code>undefined</code> | 事件回调，只有options为事件名时需要设置 |
+| options | [<code>Event</code>](#module_types..event) \| <code>Object.&lt;module:types~Event, module:types~EventCallback&gt;</code> | 可以为事件名，也可以为事件名和事件回调 |
+| ext | [<code>EventCallback</code>](#module_types..eventcallback) \| <code>undefined</code> | 事件回调，只有options为事件名时需要设置 |
 
 **Example**  
 ```js
