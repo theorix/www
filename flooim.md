@@ -1,4 +1,4 @@
-# flooim {#module_flooim}
+## flooim {#module_flooim}
 
 * [flooim](#module_flooim)
     * [.flooim(config)](#module_flooim.flooim) ⇒ <code>object</code>

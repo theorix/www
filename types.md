@@ -1,4 +1,4 @@
-# types {#module_types}
+## types {#module_types}
 
 * [types](#module_types)
     * ["flooNotice" (res)](#event_floonotice)

@@ -1,4 +1,4 @@
-# userManage {#module_usermanage}
+## userManage {#module_usermanage}
 
 * [userManage](#module_usermanage)
     * [.getToken()](#module_usermanage.gettoken) ⇒ <code>string</code>
