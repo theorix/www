@@ -11,7 +11,7 @@
     * [.off(options, ext)](#module_flooim.off)
     * [.logout()](#module_flooim.logout)
 
-## flooim.flooim(config) ⇒ <code>object</code> {#module_flooim.flooim}
+### flooim.flooim(config) ⇒ <code>object</code> {#module_flooim.flooim}
 初始化SDK
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -36,7 +36,7 @@ autoLogin: true
 import flooim from 'floo-2.0.0';
 const im = flooim(config);
 ```
-## flooim.login(opt) {#module_flooim.login}
+### flooim.login(opt) {#module_flooim.login}
 登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -47,7 +47,7 @@ const im = flooim(config);
 | opt.name | <code>string</code> | 用户名 |
 | opt.password | <code>string</code> | 密码 |
 
-## flooim.qrlogin(opt) {#module_flooim.qrlogin}
+### flooim.qrlogin(opt) {#module_flooim.qrlogin}
 二维码登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -58,7 +58,7 @@ const im = flooim(config);
 | opt.user_id | <code>number</code> | 用户ID |
 | opt.password | <code>string</code> | 密码 |
 
-## flooim.tokenLogin(opt) {#module_flooim.tokenlogin}
+### flooim.tokenLogin(opt) {#module_flooim.tokenlogin}
 token登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -69,7 +69,7 @@ token登录
 | opt.user_id | <code>number</code> | 用户ID |
 | opt.token | <code>string</code> | Token |
 
-## flooim.idLogin(opt) {#module_flooim.idlogin}
+### flooim.idLogin(opt) {#module_flooim.idlogin}
 使用用户ID和密码登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -80,12 +80,12 @@ token登录
 | opt.user_id | <code>number</code> | 用户ID |
 | opt.password | <code>string</code> | 密码 |
 
-## flooim.isLogin() ⇒ <code>boolean</code> {#module_flooim.islogin}
+### flooim.isLogin() ⇒ <code>boolean</code> {#module_flooim.islogin}
 是否已登录
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
 **Returns**: <code>boolean</code> - 是否已登录  
-## flooim.on(options, ext) {#module_flooim.on}
+### flooim.on(options, ext) {#module_flooim.on}
 事件监听
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -109,7 +109,7 @@ im.on({
    ...
  })
 ```
-## flooim.off(options, ext) {#module_flooim.off}
+### flooim.off(options, ext) {#module_flooim.off}
 取消监听
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  
@@ -133,7 +133,7 @@ const im = flooim(config);
  ...
  })
 ```
-## flooim.logout() {#module_flooim.logout}
+### flooim.logout() {#module_flooim.logout}
 退出账户
 
 **Kind**: static method of [<code>flooim</code>](#module_flooim)  

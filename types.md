@@ -56,7 +56,7 @@
     * [~Event](#module_types..event) : <code>string</code>
     * [~EventCallback](#module_types..eventcallback) : <code>function</code>
 
-## "flooNotice" (res) {#event_floonotice}
+### "flooNotice" (res) {#event_floonotice}
 Floo通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -92,7 +92,7 @@ Floo通知
 {category: 'userNotice', desc:'DEVICE_REMOVED'} // 设备被移除的通知
 {category: 'userNotice', desc:'CLUSTER_CHANGED'} // 用户所在集群改变 需要重新登录
 ```
-## "flooError" (res) {#event_flooerror}
+### "flooError" (res) {#event_flooerror}
 Floo错误
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -112,7 +112,7 @@ Floo错误
 {category: 'LICENSE', desc:'超出 LICENSE 用户数限制，请购买更高规格服务。'}
 {category: 'DNS_FAILED', desc: dnsServer } // DNS错误: 无法访问
 ```
-## "loginFail" (desc) {#event_loginfail}
+### "loginFail" (desc) {#event_loginfail}
 登录失败
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -121,7 +121,7 @@ Floo错误
 | --- | --- | --- |
 | desc | <code>string</code> | 失败原因 |
 
-## "loginSuccess" (res) {#event_loginsuccess}
+### "loginSuccess" (res) {#event_loginsuccess}
 登录成功
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -130,7 +130,7 @@ Floo错误
 | --- | --- | --- |
 | res | <code>object</code> | 空对象 |
 
-## "onGroupListUpdate" (meta) {#event_ongrouplistupdate}
+### "onGroupListUpdate" (meta) {#event_ongrouplistupdate}
 群列表更新
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -139,7 +139,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) \| <code>undefined</code> | 通知消息内容 |
 
-## "onGroupMemberChanged" (groupId) {#event_ongroupmemberchanged}
+### "onGroupMemberChanged" (groupId) {#event_ongroupmemberchanged}
 群成员列表更新
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -148,7 +148,7 @@ Floo错误
 | --- | --- | --- |
 | groupId | <code>number</code> | 群ID |
 
-## "onGroupMessage" (meta) {#event_ongroupmessage}
+### "onGroupMessage" (meta) {#event_ongroupmessage}
 收到群消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -157,7 +157,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 消息内容 |
 
-## "onInputStatusMessage" (res) {#event_oninputstatusmessage}
+### "onInputStatusMessage" (res) {#event_oninputstatusmessage}
 对方正在输入
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -169,7 +169,7 @@ Floo错误
 | res.from | <code>string</code> | 发送者用户ID |
 | res.to | <code>string</code> | 接收者用户ID |
 
-## "onMentionMessage" (meta) {#event_onmentionmessage}
+### "onMentionMessage" (meta) {#event_onmentionmessage}
 收到群组&#64;消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -178,7 +178,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 消息内容 |
 
-## "onMessageCanceled" (res) {#event_onmessagecanceled}
+### "onMessageCanceled" (res) {#event_onmessagecanceled}
 消息被取消已读
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -189,7 +189,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onMessageDeleted" (res) {#event_onmessagedeleted}
+### "onMessageDeleted" (res) {#event_onmessagedeleted}
 消息被删除
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -200,7 +200,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onMessageRecalled" (res) {#event_onmessagerecalled}
+### "onMessageRecalled" (res) {#event_onmessagerecalled}
 消息被撤回
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -211,7 +211,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onMessageStatusChanged" (res) {#event_onmessagestatuschanged}
+### "onMessageStatusChanged" (res) {#event_onmessagestatuschanged}
 消息状态变更：撤回/删除/已读
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -222,7 +222,7 @@ Floo错误
 | res.uid | <code>string</code> | 会话ID |
 | res.mid | <code>string</code> | 消息ID |
 
-## "onReceiveHistoryMsg" (res) {#event_onreceivehistorymsg}
+### "onReceiveHistoryMsg" (res) {#event_onreceivehistorymsg}
 收到历史消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -232,7 +232,7 @@ Floo错误
 | res | <code>object</code> |  |
 | res.next | <code>number</code> | 下次取历史消息的key |
 
-## "onRosterInfoUpdate" (res) {#event_onrosterinfoupdate}
+### "onRosterInfoUpdate" (res) {#event_onrosterinfoupdate}
 好友信息变更
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -242,7 +242,7 @@ Floo错误
 | res | <code>object</code> |  |
 | res.rosterIds | <code>Array.&lt;number&gt;</code> | 好友的用户ID列表 |
 
-## "onRosterListUpdate" (meta) {#event_onrosterlistupdate}
+### "onRosterListUpdate" (meta) {#event_onrosterlistupdate}
 好友列表变更
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -251,7 +251,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 好友通知的消息内容 |
 
-## "onRosterMessage" (meta) {#event_onrostermessage}
+### "onRosterMessage" (meta) {#event_onrostermessage}
 收到单聊消息
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -260,7 +260,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 消息内容 |
 
-## "onSendingMessageStatusChanged" (res) {#event_onsendingmessagestatuschanged}
+### "onSendingMessageStatusChanged" (res) {#event_onsendingmessagestatuschanged}
 消息发送状态变更
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -271,7 +271,7 @@ Floo错误
 | res.status: | <code>number</code> | 发送状态，取值为sending|failed|sent |
 | res.mid: | <code>number</code> | 客户端生成的client_mid |
 
-## "onUnreadChange" (cid) {#event_onunreadchange}
+### "onUnreadChange" (cid) {#event_onunreadchange}
 未读数改变
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -280,11 +280,11 @@ Floo错误
 | --- | --- | --- |
 | cid | <code>number</code> | 会话ID |
 
-## "recentlistUpdate" {#event_recentlistupdate}
+### "recentlistUpdate" {#event_recentlistupdate}
 最近会话更新
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
-## "onGroupCreated" (meta) {#event_ongroupcreated}
+### "onGroupCreated" (meta) {#event_ongroupcreated}
 群组创建通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -293,7 +293,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupDestoryed" (meta) {#event_ongroupdestoryed}
+### "onGroupDestoryed" (meta) {#event_ongroupdestoryed}
 群组解散通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -302,7 +302,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupJoined" (meta) {#event_ongroupjoined}
+### "onGroupJoined" (meta) {#event_ongroupjoined}
 成员入群通知
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -311,7 +311,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupApplyAccepted" (meta) {#event_ongroupapplyaccepted}
+### "onGroupApplyAccepted" (meta) {#event_ongroupapplyaccepted}
 群申请被通过
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -320,7 +320,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupApplyDeclined" (meta) {#event_ongroupapplydeclined}
+### "onGroupApplyDeclined" (meta) {#event_ongroupapplydeclined}
 群申请被拒绝
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -329,7 +329,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupBaned" (meta) {#event_ongroupbaned}
+### "onGroupBaned" (meta) {#event_ongroupbaned}
 被群禁言
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -338,7 +338,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## "onGroupUnbaned" (meta) {#event_ongroupunbaned}
+### "onGroupUnbaned" (meta) {#event_ongroupunbaned}
 被群取消禁言
 
 **Kind**: event emitted by [<code>types</code>](#module_types)  
@@ -347,7 +347,7 @@ Floo错误
 | --- | --- | --- |
 | meta | [<code>Meta</code>](#module_types..meta) | 群通知的消息内容 |
 
-## types~RosterItem : <code>object</code> {#module_types..rosteritem}
+### types~RosterItem : <code>object</code> {#module_types..rosteritem}
 好友信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -368,7 +368,7 @@ Floo错误
 | user_id | <code>number</code> | 好友用户ID,int64 |
 | username | <code>string</code> | 用户名 |
 
-## types~UserSettings : <code>object</code> {#module_types..usersettings}
+### types~UserSettings : <code>object</code> {#module_types..usersettings}
 用户设置信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -394,7 +394,7 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | vibratory | <code>boolean</code> | 收到消息时否振动 |
 
-## types~UserProfile : <code>object</code> {#module_types..userprofile}
+### types~UserProfile : <code>object</code> {#module_types..userprofile}
 用户信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -412,7 +412,7 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | username | <code>string</code> | 用户名 |
 
-## types~Meta : <code>object</code> {#module_types..meta}
+### types~Meta : <code>object</code> {#module_types..meta}
 消息体
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -432,7 +432,7 @@ Floo错误
 | timestamp | <code>string</code> | 消息发送时间戳（毫秒） |
 | toType | <code>string</code> | 接收者类型： roster - 好友， group - 群组 |
 
-## types~RosterApplication : <code>object</code> {#module_types..rosterapplication}
+### types~RosterApplication : <code>object</code> {#module_types..rosterapplication}
 加好友申请列表项
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -445,7 +445,7 @@ Floo错误
 | status | <code>number</code> | 状态： 0 - 等待确认， 1 - 接受， 2 - 拒绝。 int32 |
 | user_id | <code>number</code> | 发起加好友申请的用户ID,int64 |
 
-## types~GroupInfoAndSettings : <code>object</code> {#module_types..groupinfoandsettings}
+### types~GroupInfoAndSettings : <code>object</code> {#module_types..groupinfoandsettings}
 群信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -474,7 +474,7 @@ Floo错误
 | count | <code>number</code> | 群成员数 |
 | capacity | <code>number</code> | 群容量 |
 
-## types~BriefGroupInfoAndSettings : <code>object</code> {#module_types..briefgroupinfoandsettings}
+### types~BriefGroupInfoAndSettings : <code>object</code> {#module_types..briefgroupinfoandsettings}
 群简要信息及用户设置
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -494,7 +494,7 @@ Floo错误
 | status | <code>number</code> | 群状态, 0：正常, 1：已解散,int32 |
 | type | <code>number</code> | 群类型: 1表示公开群，0表示私有群, 2表示聊天室。int32 |
 
-## types~GroupMember : <code>object</code> {#module_types..groupmember}
+### types~GroupMember : <code>object</code> {#module_types..groupmember}
 群成员格式
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -507,7 +507,7 @@ Floo错误
 | user_id | <code>number</code> | 用户id,int64 |
 | avatar | <code>string</code> | 头像地址 |
 
-## types~GroupMemberBanned : <code>object</code> {#module_types..groupmemberbanned}
+### types~GroupMemberBanned : <code>object</code> {#module_types..groupmemberbanned}
 禁言成员
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -521,7 +521,7 @@ Floo错误
 | avatar | <code>string</code> | 头像地址 |
 | expired_time | <code>number</code> | 禁言过期时间 |
 
-## types~GroupUserRelationResponse : <code>object</code> {#module_types..groupuserrelationresponse}
+### types~GroupUserRelationResponse : <code>object</code> {#module_types..groupuserrelationresponse}
 群用户请求结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -533,7 +533,7 @@ Floo错误
 | result | <code>string</code> | 结果 |
 | user_id | <code>number</code> | 用户ID，int64 |
 
-## types~GroupAnnouncement : <code>object</code> {#module_types..groupannouncement}
+### types~GroupAnnouncement : <code>object</code> {#module_types..groupannouncement}
 群公告内容
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -548,7 +548,7 @@ Floo错误
 | id | <code>number</code> | 公告id,int64 |
 | title | <code>string</code> | 公告标题 |
 
-## types~GroupInfoRequest : <code>object</code> {#module_types..groupinforequest}
+### types~GroupInfoRequest : <code>object</code> {#module_types..groupinforequest}
 创建群
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -562,7 +562,7 @@ Floo错误
 | type | <code>number</code> | 群类型 1表示公开群，0表示私有群, 2表示聊天室,int32 |
 | user_list | <code>Array.&lt;number&gt;</code> | 邀请入群的用户id列表 |
 
-## types~GroupBannedMemberRequest : <code>object</code> {#module_types..groupbannedmemberrequest}
+### types~GroupBannedMemberRequest : <code>object</code> {#module_types..groupbannedmemberrequest}
 禁言请求
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -574,7 +574,7 @@ Floo错误
 | group_id | <code>number</code> | 群id,int64 |
 | user_list | <code>Array.&lt;number&gt;</code> | 用户id列表 |
 
-## types~GroupBlockedListItem : <code>object</code> {#module_types..groupblockedlistitem}
+### types~GroupBlockedListItem : <code>object</code> {#module_types..groupblockedlistitem}
 群组黑名单
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -586,7 +586,7 @@ Floo错误
 | group_id | <code>number</code> | 群id,int64 |
 | create_at | <code>string</code> | 创建时间 |
 
-## types~GroupInvitation : <code>object</code> {#module_types..groupinvitation}
+### types~GroupInvitation : <code>object</code> {#module_types..groupinvitation}
 群组邀请信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -602,7 +602,7 @@ Floo错误
 | expire_time | <code>number</code> | 过期时间 |
 | create_at | <code>string</code> | 创建时间 |
 
-## types~GroupApplication : <code>object</code> {#module_types..groupapplication}
+### types~GroupApplication : <code>object</code> {#module_types..groupapplication}
 群申请信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -616,7 +616,7 @@ Floo错误
 | expire_time | <code>number</code> | 过期时间 |
 | status | <code>number</code> | 状态： 0 - 待处理，1 - 同意，2 - 拒绝 |
 
-## types~GroupSharedFile : <code>object</code> {#module_types..groupsharedfile}
+### types~GroupSharedFile : <code>object</code> {#module_types..groupsharedfile}
 群共享文件返回格式
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -634,7 +634,7 @@ Floo错误
 | uploader | <code>number</code> | 共享文件上传者,int64 |
 | url | <code>string</code> | 共享文件url |
 
-## types~GroupSharedFileResponse : <code>object</code> {#module_types..groupsharedfileresponse}
+### types~GroupSharedFileResponse : <code>object</code> {#module_types..groupsharedfileresponse}
 删除群共享文件结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -646,7 +646,7 @@ Floo错误
 | reason | <code>string</code> | 原因 |
 | result | <code>string</code> | 结果 |
 
-## types~GroupBanAllResponse : <code>object</code> {#module_types..groupbanallresponse}
+### types~GroupBanAllResponse : <code>object</code> {#module_types..groupbanallresponse}
 全员禁言结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -656,7 +656,7 @@ Floo错误
 | --- | --- | --- |
 | ban_expire_time | <code>number</code> | 全员禁言过期时间,int64 |
 
-## types~FileUpload : <code>object</code> {#module_types..fileupload}
+### types~FileUpload : <code>object</code> {#module_types..fileupload}
 文件上传信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -668,7 +668,7 @@ Floo错误
 | oss_body_param | <code>object.&lt;string, string&gt;</code> | 额外参数 |
 | upload_url | <code>string</code> | 上传地址 |
 
-## types~FileUploadResult : <code>object</code> {#module_types..fileuploadresult}
+### types~FileUploadResult : <code>object</code> {#module_types..fileuploadresult}
 文件上传结果
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -678,7 +678,7 @@ Floo错误
 | --- | --- | --- |
 | url | <code>string</code> | 下载地址 |
 
-## types~fileUploadProgress : <code>function</code> {#module_types..fileuploadprogress}
+### types~fileUploadProgress : <code>function</code> {#module_types..fileuploadprogress}
 文件上传进度回调
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -689,7 +689,7 @@ Floo错误
 | res.loaded | <code>number</code> | 已下载字节数 |
 | res.total | <code>number</code> | 总字节数 |
 
-## types~ConversationItem : <code>object</code> {#module_types..conversationitem}
+### types~ConversationItem : <code>object</code> {#module_types..conversationitem}
 会话信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -702,7 +702,7 @@ Floo错误
 | timestamp | <code>string</code> | 消息发送时间戳（毫秒） |
 | type | <code>string</code> | 会话类型： roster - 单聊， group - 群聊 |
 
-## types~UserProfile : <code>object</code> {#module_types..userprofile}
+### types~UserProfile : <code>object</code> {#module_types..userprofile}
 用户信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -720,7 +720,7 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | username | <code>string</code> | 用户名 |
 
-## types~UserSettings : <code>object</code> {#module_types..usersettings}
+### types~UserSettings : <code>object</code> {#module_types..usersettings}
 用户设置信息
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
@@ -746,11 +746,11 @@ Floo错误
 | user_id | <code>number</code> | 用户ID,int64 |
 | vibratory | <code>boolean</code> | 收到消息时否振动 |
 
-## types~Event : <code>string</code> {#module_types..event}
+### types~Event : <code>string</code> {#module_types..event}
 监听事件名称
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  
-## types~EventCallback : <code>function</code> {#module_types..eventcallback}
+### types~EventCallback : <code>function</code> {#module_types..eventcallback}
 监听事件回调
 
 **Kind**: inner typedef of [<code>types</code>](#module_types)  

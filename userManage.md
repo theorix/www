@@ -12,26 +12,26 @@
     * [.asyncGetSettings()](#module_usermanage.asyncgetsettings) ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings)
     * [.asyncUpdateSettings(settings)](#module_usermanage.asyncupdatesettings) ⇒ <code>Promise.&lt;boolean&gt;</code>
 
-## userManage.getToken() ⇒ <code>string</code> {#module_usermanage.gettoken}
+### userManage.getToken() ⇒ <code>string</code> {#module_usermanage.gettoken}
 获取登录用户的token
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>string</code> - 用户的token  
-## userManage.getUid() ⇒ <code>number</code> {#module_usermanage.getuid}
+### userManage.getUid() ⇒ <code>number</code> {#module_usermanage.getuid}
 获取登录用户的uid
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>number</code> - 用户ID  
-## userManage.getAppid() ⇒ <code>string</code> {#module_usermanage.getappid}
+### userManage.getAppid() ⇒ <code>string</code> {#module_usermanage.getappid}
 获取appid
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: <code>string</code> - APP ID  
-## userManage.getConversationList() ⇒ [<code>Array.&lt;ConversationItem&gt;</code>](#module_types..conversationitem) {#module_usermanage.getconversationlist}
+### userManage.getConversationList() ⇒ [<code>Array.&lt;ConversationItem&gt;</code>](#module_types..conversationitem) {#module_usermanage.getconversationlist}
 获取最近会话列表
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
-## userManage.asyncUpdateAvatar(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdateavatar}
+### userManage.asyncUpdateAvatar(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdateavatar}
 更新头像
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
@@ -42,7 +42,7 @@
 | params | <code>object</code> | 参数 |
 | params.avatar | <code>string</code> | 头像 url |
 
-## userManage.asyncUpdateNickName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdatenickname}
+### userManage.asyncUpdateNickName(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdatenickname}
 更新昵称
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
@@ -53,12 +53,12 @@
 | params | <code>object</code> | 参数 |
 | params.nick_name | <code>string</code> | 昵称 |
 
-## userManage.asyncGetProfile() ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile) {#module_usermanage.asyncgetprofile}
+### userManage.asyncGetProfile() ⇒ [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile) {#module_usermanage.asyncgetprofile}
 获取用户profile
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: [<code>Promise.&lt;UserProfile&gt;</code>](#module_types..userprofile) - 用户信息  
-## userManage.asyncUpdateProfile(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdateprofile}
+### userManage.asyncUpdateProfile(params) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdateprofile}
 更新用户profile
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
@@ -72,12 +72,12 @@
 | params.private_info | <code>string</code> | 私有信息，仅自己可见 |
 | params.public_info | <code>string</code> | 公开信息，好友和陌生人可见 |
 
-## userManage.asyncGetSettings() ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings) {#module_usermanage.asyncgetsettings}
+### userManage.asyncGetSettings() ⇒ [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings) {#module_usermanage.asyncgetsettings}
 获取用户设置信息
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
 **Returns**: [<code>Promise.&lt;UserSettings&gt;</code>](#module_types..usersettings) - 用户信息  
-## userManage.asyncUpdateSettings(settings) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdatesettings}
+### userManage.asyncUpdateSettings(settings) ⇒ <code>Promise.&lt;boolean&gt;</code> {#module_usermanage.asyncupdatesettings}
 修改用户设置
 
 **Kind**: static method of [<code>userManage</code>](#module_usermanage)  
