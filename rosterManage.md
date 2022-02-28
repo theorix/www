@@ -38,7 +38,7 @@
 | --- | --- | --- |
 | force | <code>boolean</code> | 是否强制从服务器拉取：true - 从服务器获取， false - 从本地存储获取 |
 
-## rosterManage.asyncGetRosterInfo(roster_id, force) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) {#module_rostermanage.asyncgetrosterinfo}
+### rosterManage.asyncGetRosterInfo(roster_id, force) ⇒ [<code>Promise.&lt;RosterItem&gt;</code>](#module_types..rosteritem) {#module_rostermanage.asyncgetrosterinfo}
 获取好友信息
 
 **Kind**: static method of [<code>rosterManage</code>](#module_rostermanage)  
