@@ -9,11 +9,11 @@
     * [.sendInputStatusMessage(uid, status)](#module_sysmanage.sendinputstatusmessage) ⇒ <code>number</code>
     * [.forwardMessage(param)](#module_sysmanage.forwardmessage) ⇒ <code>number</code>
     * [.getMessageStatus(cid, mid, isGroup)](#module_sysmanage.getmessagestatus) ⇒ <code>string</code>
-    * [.asyncFileUpload(param)](#module_sysmanage.asyncfileupload) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..fileuploadresult)
+    * [.asyncFileUpload(param)](#module_sysmanage.asyncfileupload) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](types.md#module_types..fileuploadresult)
     * [.getImage(param)](#module_sysmanage.getimage) ⇒ <code>string</code>
     * [.deleteConversation(id, other_devices)](#module_sysmanage.deleteconversation)
-    * [.asyncGetGroupAvatarUploadUrl(params)](#module_sysmanage.asyncgetgroupavataruploadurl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload)
-    * [.asyncGetFileUploadChatFileUrl(params)](#module_sysmanage.asyncgetfileuploadchatfileurl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload)
+    * [.asyncGetGroupAvatarUploadUrl(params)](#module_sysmanage.asyncgetgroupavataruploadurl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](types.md#module_types..fileupload)
+    * [.asyncGetFileUploadChatFileUrl(params)](#module_sysmanage.asyncgetfileuploadchatfileurl) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](types.md#module_types..fileupload)
 
 ### sysManage.sendRosterMessage(msg) ⇒ <code>number</code> {#module_sysmanage.sendrostermessage}
 发送单聊消息
@@ -110,11 +110,11 @@
 | mid | <code>number</code> |  | 消息ID |
 | isGroup | <code>boolean</code> | <code>false</code> | 是否是群聊 |
 
-### sysManage.asyncFileUpload(param) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..fileuploadresult) {#module_sysmanage.asyncfileupload}
+### sysManage.asyncFileUpload(param) ⇒ [<code>Promise.&lt;FileUploadResult&gt;</code>](types.md#module_types..fileuploadresult) {#module_sysmanage.asyncfileupload}
 上传文件
 
 **Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
-**Returns**: [<code>Promise.&lt;FileUploadResult&gt;</code>](#module_types..fileuploadresult) - 文件上传结果  
+**Returns**: [<code>Promise.&lt;FileUploadResult&gt;</code>](types.md#module_types..fileuploadresult) - 文件上传结果  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -125,7 +125,7 @@
 | param.file | <code>File</code> | 文件 |
 | param.fileType | <code>string</code> | 文件类型：file - 普通聊天文件, audio - 语音聊天文件(amr格式),image - 图片聊天文件, video - 视频聊天文件, audio-mp3 - 语音聊天文件(mp3格式), shareFile - 普通共享文件, shareAudio - 语音共享文件, shareImage - 图片共享文件, shareVideo - 视频共享文件 |
 | param.chatType | <code>number</code> | 聊天类型： roster - 单聊, group - 群聊 |
-| param.processCallback | [<code>fileUploadProgress</code>](#module_types..fileuploadprogress) | 上传进度回调 |
+| param.processCallback | [<code>fileUploadProgress</code>](types.md#module_types..fileuploadprogress) | 上传进度回调 |
 
 ### sysManage.getImage(param) ⇒ <code>string</code> {#module_sysmanage.getimage}
 拼装图片路径
@@ -151,22 +151,22 @@
 | id | <code>number</code> |  | 会话ID |
 | other_devices | <code>boolean</code> | <code>true</code> | 是否同时删除其它设备上的会话 |
 
-### sysManage.asyncGetGroupAvatarUploadUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) {#module_sysmanage.asyncgetgroupavataruploadurl}
+### sysManage.asyncGetGroupAvatarUploadUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](types.md#module_types..fileupload) {#module_sysmanage.asyncgetgroupavataruploadurl}
 获取上传群头像URL
 
 **Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
-**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) - 文件上传信息  
+**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](types.md#module_types..fileupload) - 文件上传信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | params | <code>object</code> | 参数 |
 | params.group_id | <code>number</code> | 群组ID |
 
-### sysManage.asyncGetFileUploadChatFileUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) {#module_sysmanage.asyncgetfileuploadchatfileurl}
+### sysManage.asyncGetFileUploadChatFileUrl(params) ⇒ [<code>Promise.&lt;FileUpload&gt;</code>](types.md#module_types..fileupload) {#module_sysmanage.asyncgetfileuploadchatfileurl}
 获取聊天文件上传地址
 
 **Kind**: static method of [<code>sysManage</code>](#module_sysmanage)  
-**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](#module_types..fileupload) - 文件上传信息  
+**Returns**: [<code>Promise.&lt;FileUpload&gt;</code>](types.md#module_types..fileupload) - 文件上传信息  
 
 | Param | Type | Description |
 | --- | --- | --- |
